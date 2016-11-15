@@ -1,0 +1,41 @@
+@charset "gb2312";
+.ltFeedback{ display:block;width:25px;height:98px;position:fixed;right:0px;margin-left:500px;top:20%;_position:absolute;_top:expression(eval(document.documentElement.scrollTop+200)); background:url(http://img1.lotour.com/index/ltFeedback.png) no-repeat 0 0;_background:url(http://img1.lotour.net/home/ltFeedback8.png) no-repeat 0 0;z-index:1000000}
+.ltFeedback:hover{text-decoration:none;background:url(http://img1.lotour.com/index/ltFeedback-hover.png) no-repeat 0 0;_background:url(http://img1.lotour.net/home/ltFeedback-hover.png) no-repeat 0 0;}
+.ltFeedback span{ display:block; font:14px/18px \5b8b\4f53; color:#ffc02e;word-wrap:break-word;word-break:nomal; padding:5px 5px 0 10px}
+.ltFeedbackLayer{ width:440px; height:420px; position:fixed; top:50%; left:50%; margin-left:-245px;margin-top:-210px;z-index:1000001;_position:absolute;_top:expression(eval(document.documentElement.scrollTop+50)); display:none; border-radius:5px; overflow:hidden}
+.ltFeedbackLayer .ltFeedbackIn{background: #fff; z-index:2; padding:0 20px; height:420px; position:relative; border-radius:5px;}
+.ltFeedbackLayer .cls{background: url(http://img1.lotour.com/index/ltFeedbackCls.png) no-repeat; position:absolute;width: 23px;height: 23px; top:10px; right:10px;-webkit-transition:0.4s linear;transition:0.4s ease-in;}
+.ltFeedbackLayer .cls:hover{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
+.ltFeedbackLayer h5{ height:65px; font:24px/66px \5FAE\8F6F\96C5\9ED1; color:#666; text-align:center}
+.ltFeedbackLayer .con{width:100%}
+.ltFeedbackLayer .con textarea{ padding:10px; width:380px;height:210px; border:1px solid #e1e1e1; color:#b2b2b2; font:14px/28px \5b8b\4f53; margin-bottom:3px}
+.ltFeedbackLayer .con textarea.rt{ color:#666}
+.ltFeedbackLayer .con p{ font:12px/50px \5b8b\4f53; color:#ff9900; text-align:center}
+.ltFeedbackLayer .con p.tip{ font:14px/45px \5FAE\8F6F\96C5\9ED1; color:#cc0000;}
+.ltFeedbackLayer .con ul{ display:block; overflow:hidden}
+.ltFeedbackLayer .con li{ font:14px/40px \5b8b\4f53; color:#666; margin-bottom:20px; float:left; width:185px}
+.ltFeedbackLayer .con li.l2{ float:right}
+.ltFeedbackLayer .con li input{ width:118px; padding:5px 11px; font:14px/21px \5b8b\4f53; color:#b2b2b2;  height:21px; border:1px solid #e1e1e1;vertical-align:middle}
+.ltFeedbackLayer .con li input.rt{color:#666;}
+.ltFeedbackLayer .con a{ display:block; width:200px; height:35px; background:#fff; font:18px/35px \5FAE\8F6F\96C5\9ED1; border:1px solid #ff840e; color:#ff840e; text-align:center; margin:40px auto 0; border-radius:3px;overflow:hidden}
+.ltFeedbackLayer .con a:hover{ background:#ff840e; color:#fff; text-decoration:none}
+.ltFeedbackShade{background: none repeat scroll 0 0 #000000;left: 0;opacity: 0.5;position: absolute;top: 0;width: 100%;z-index: 1000000;filter: Alpha(opacity=50); display:none}
+.ltFeedbackLayer2{ width:440px; height:155px; position:fixed; top:50%; left:50%; margin-left:-245px;margin-top:-210px; z-index:1000001;_position:absolute;_top:expression(eval(document.documentElement.scrollTop+50)); display:none; border-radius:5px; overflow:hidden}
+.ltFeedbackLayer2 .ltFeedbackBg{ width:440px; height:155px;}
+.ltFeedbackLayer2 .ltFeedbackIn2{width:440px; height:155px; background:#fff; border-radius:5px; overflow:hidden}
+.ltFeedbackLayer2 .cls{background: url(http://img1.lotour.com/index/ltFeedbackCls.png) no-repeat; position:absolute;width: 23px;height: 23px; top:10px; right:10px;-webkit-transition:0.4s linear;transition:0.4s ease-in;}
+.ltFeedbackLayer2 .cls:hover{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
+.ltFeedbackLayer2 h5{ height:65px; font:24px/66px \5FAE\8F6F\96C5\9ED1; color:#ff840e; text-align:center}
+.ltFeedbackLayer2 p{ font:24px/30px \5FAE\8F6F\96C5\9ED1; color:#ff9900; text-align:center; margin-top:65px}
+
+@media screen and (max-width:1200px){
+	.bt-ad .in{ width:980px;  margin-left: -490px;}
+	.bt-ad .in .cls{}
+
+}
+
+@media screen and (max-width:768px){
+.ltFeedback {
+  display: none;
+}
+}

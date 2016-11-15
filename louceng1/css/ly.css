@@ -1,0 +1,536 @@
+@charset "UTF-8";
+/*css 初始化 */
+html, body, ul, li, ol, p, h1, h2, h3, h5,form, img {
+    margin: 0;
+    padding: 0;
+}
+img, input, button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+ul, ol {
+    list-style: none;				/*清除列表风格*/
+}
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "宋体";
+}
+select, input {
+    vertical-align: middle;
+}
+select, input, textarea {
+    font-size: 12px;
+    margin: 0;
+}
+img {
+    border: 0;
+    vertical-align: middle;
+}
+body {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53";
+    color: #666;
+    background: #fff
+}
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+a {
+    color: #555;
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+/*公共类*/
+.w {
+    /*版心 提取 */
+    width: 1920px;
+    margin: 0 auto;
+}
+.fl {
+    float: left
+}
+.fr {
+    float: right
+}
+.hide {
+    display: none
+}
+
+/*lyFind部分start*/
+#lyFind{
+    width: 1200px;
+    height: 520px;
+    padding: 10px 75px;
+    padding-top: 50px;
+}
+#lyFind .findTitle,#lyInspir .inspirTitle{
+    text-align: center;
+    font: 24px/30px "Microsoft yahei";
+    color: #676b6e;
+}
+#lyFind .findTitle a,#lyInspir .inspirTitle a{
+    color: #676b6e;
+}
+#lyFind .findTitle a:hover,#lyInspir .inspirTitle a:hover{
+    color: #9ca8a0;
+}
+#lyFind .findIntro,#lyInspir .inspirIntro{
+    text-align: center;
+    font: 14px/30px arial;
+    color: #b9b9b9;
+    padding-bottom: 18px;
+}
+#lyFind .findContent{
+    height: 443px;
+}
+#lyFind .find{
+    width: 295px;
+    height: 443px;
+    float: left;
+    padding-right: 5px;
+    position: relative;
+}
+#lyFind .pic{
+    position: relative;
+    cursor: pointer;
+}
+#lyFind .pic em{
+    width: 295px;
+    height: 295px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    color: #f9ffcd;
+    font: 21px/29px "Microsoft yahei";
+    text-align: center;
+}
+#lyFind .pic em span{
+    display: block;
+    padding-top: 118px;
+    cursor: pointer;
+}
+#lyFind .pic img{
+    border-radius: 10px;
+    cursor: pointer;
+}
+#lyFind .find .disp{
+    position: absolute;
+    bottom: 10px;
+}
+#lyFind .disp a{
+    display: inline-block;
+    color: #eee;
+    font: 12px/17px "Microsoft yahei";
+    border: 1px solid #eee;
+    padding: 0 8px;
+    border-radius: 3px;
+    float: left;
+    margin-left: 14px;
+    opacity: 0.8;
+}
+#lyFind .disp a:hover{
+    color: #fff;
+}
+#lyFind .mask{
+    width: 295px;
+    height: 295px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.6);
+}
+#lyFind .cornor,#lyFind .cornor1,#lyTheme .cornor2{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #ccc;
+    padding: 0 6px;
+    cursor: pointer;
+    border-bottom-right-radius: 8px;
+}
+#lyFind .cornor{
+    background: rgba(0, 0, 0, 0.3);
+}
+#lyFind .cornor1{
+    background: rgba(60, 142, 255, 0.4);
+}
+#lyFind .findtit{
+    height: 74px;
+    padding-left: 10px;
+}
+#lyFind .findtit h5 a{
+    color: #555;
+    font: 18px/40px "Microsoft yahei";
+}
+#lyFind .findtit h5 a:hover{
+    color: #ff860d;
+}
+#lyFind .inspIntro{
+    height: 22px;
+    line-height: 22px;
+}
+#lyFind .findGo{
+    display: inline-block;
+    padding: 0 21px 0 7px;
+    color: #b1b1b1;
+    padding-left: 16px;
+    background: url("../images/ly9.jpg") no-repeat 0 5px;
+}
+#lyFind .findGo:hover{
+    color: #ff860d;
+}
+#lyFind .lover{
+    display: inline-block;
+    color: #b1b1b1;
+    padding-left: 6px;
+    padding-left: 18px;
+    background: url("../images/ly10.jpg") no-repeat 0 5px;
+}
+#lyFind .findtravel{
+    width: 167px;
+    height: 61px;
+    padding: 12px 10px 8px 17px;
+    border-top: 1px solid #E7E7E7;
+}
+#lyFind .findtravel .fl{
+    float: left;
+}
+#lyFind .squl{
+    border-radius: 15px;
+}
+#lyFind .findP{
+    float: left;
+    width: 130px;
+    padding-left: 5px;
+}
+#lyFind .findP a{
+    font: 12px/19px "microsoft yahei";
+    color: #818181;
+}
+#lyFind .findP a:hover{
+    color: #ff860d;
+}
+#lyFind .findP p{
+    font: 12px/19px "microsoft yahei";
+    color: #b7b7b7;
+}
+/*lyFind部分end*/
+
+/*lyTheme部分start*/
+#lyTheme{
+     width: 1200px;
+     height: 350px;
+     padding: 55px 75px;
+}
+#lyTheme .themeTitle{
+    width: 400px;
+    margin-bottom: 25px;
+    margin-left: 33%;
+    font: 16px/22px "Microsoft yahei";
+    text-align: center;
+}
+#lyTheme .themeTitle:hover{
+    color: #9ca8a0;
+}
+#lyTheme .themeContent{
+    height: 280px;
+}
+#lyTheme .content{
+    width: 597px;
+    height: 280px;
+    overflow: hidden;
+    float: left;
+}
+#lyTheme .content1{
+    float: left;
+}
+#lyTheme .content2{
+    float: right;
+}
+#lyTheme .introAll{
+    height: 64px;
+    padding-top: 16px;
+}
+#lyTheme .introAll .listIntro1,#lyTheme .introAll .listIntro2{
+    text-align: center;
+}
+#lyTheme .boxAll{
+    width: 597px;
+    height: 200px;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+#lyTheme .scroll{
+    width: 610px;
+}
+#lyTheme .scroll li{
+    width: 199px;
+    height: 200px;
+    float: left;
+    border-radius: 3px;
+    position: relative;
+    cursor: pointer;
+}
+#lyTheme .scroll .scrInt{
+    font: 21px/200px "Microsoft yahei";
+    color: #fff;
+    position: absolute;
+    left: 77px;
+}
+/*lyTheme部分end*/
+
+/*lyBanner部分start*/
+#lyBanner {
+    overflow: hidden;
+    margin-bottom: 55px;
+    width: 100%;
+}
+#lyBanner .bannerPic{
+    height: 658px;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    background: url("../images/ly29.jpg") no-repeat;
+}
+#lyBanner .bannerAll{
+    position: absolute;
+    top: 380px;
+    left: 50%;
+    margin-left: -271px;
+    color: #fff;
+}
+#lyBanner .bannerTitle{
+    font: 24px/50px \5FAE\8F6F\96C5\9ED1,"Microsoft YaHei";
+}
+#lyBanner .line{
+    width: 500px;
+    height: 1px;
+    position: absolute;
+    left: 50%;
+    top: 80px;
+    margin-left: -250px;
+    background-color: #fff;
+    opacity: 0.3;
+
+}
+#lyBanner .linePic{
+    border-radius: 100%;
+    width: 60px;
+    position: absolute;
+    top: 50px;
+    left: 208px;
+    z-index: 2;
+}
+#lyBanner .bannerName{
+    position: absolute;
+    top: 110px;
+    left: 205px;
+    font: 16px/48px "Microsoft yahei";
+}
+#lyBanner .bannerGo{
+    width: 220px;
+    height: 43px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 167px;
+    left: 50%;
+    margin-left: -110px;
+    color: #fff;
+    opacity: 0.75;
+    font: 16px/43px \5FAE\8F6F\96C5\9ED1,"Microsoft YaHei";;
+}
+#lyBanner .banTianshi{
+    width: 100px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+/*lyBanner部分end*/
+
+/*lyInspir部分start*/
+#lyInspir{
+    width: 1200px;
+    height: 507px;
+    padding: 10px 75px;
+    padding-bottom: 40px;
+}
+#lyInspir .inspirText{
+    text-align: center;
+    font: 14px/14px "Microsoft yahei";
+    color: #949494;
+    padding-bottom: 18px;
+}
+#lyInspir .inspirDisp{
+    text-align: center;
+    padding-bottom: 22px;
+}
+#lyInspir .insSmaPic{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    margin: 0 4px;
+}
+#lyInspir .insContent{
+    width: 1200px;
+    height: 355px;
+    overflow: hidden;
+    position: relative;
+}
+#lyInspir .insCon{
+    width: 6000px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#lyInspir .insCon li{
+    float: left;
+    height: 355px;
+    width: 295px;
+    margin-right: 6px;
+    position: relative;
+}
+#lyInspir .insCon img{
+    border-radius: 8px;
+    position: relative;
+}
+#lyInspir .insCon li.insLast{
+    margin-right: 3px;
+}
+#lyInspir .insArr{
+    display: none;
+}
+#lyInspir .insArr span{
+    position:absolute;
+    top:40%;
+    margin-top:-30px;
+    width:40px;
+    height:60px;
+    background:#000;
+    opacity:0.3;
+    cursor:pointer;
+    line-height:60px;
+    text-align:center;
+    font-weight:bold;
+    font-family:'黑体';
+    font-size:30px;
+    color:#fff;
+    border:1px solid #ccc;
+}
+#lyInspir .insArr .insLeft{
+    left: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+#lyInspir .insArr .insRight{
+    right: 0;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+#lyInspir .insCon em{
+    width: 295px;
+    height: 295px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    color: #f9ffcd;
+    font: 21px/29px "Microsoft yahei";
+    text-align: center;
+}
+#lyInspir .insCon em span{
+    display: block;
+    padding-top: 118px;
+    cursor: pointer;
+}
+#lyInspir .insCon .insMask{
+    width: 295px;
+    height: 88px;
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: rgba(0,0,0,0.6);
+    display: none;
+}
+#lyInspir .insDisp{
+    position: absolute;
+    top: 10px;
+}
+#lyInspir .insDisp a{
+    display: inline-block;
+    color: #eee;
+    font: 12px/17px "Microsoft yahei";
+    border: 1px solid #eee;
+    padding: 0 8px;
+    border-radius: 3px;
+    float: left;
+    margin-left: 14px;
+    opacity: 0.8;
+}
+#lyInspir .insDisp a:hover{
+    color: #fff;
+    background: #ff860d;
+    border: 1px solid #ff860d;
+}
+#lyInspir .insMask .maskL{
+    font: 14px/17px "Microsoft yahei";
+    float: left;
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    color: #9ca8a0;
+}
+#lyInspir .insMask .maskL:hover{
+    color: #ff860d;
+}
+#lyInspir .insMask .maskR{
+    font: 14px/17px "Microsoft yahei";
+    float: right;
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    color: #9ca8a0;
+}
+#lyInspir .insContent .insSay{
+    font: 18px/30px "Microsoft yahei";
+    padding-top: 15px;
+    padding-left: 10px;
+}
+#lyInspir .insContent .insSay:hover{
+    color: #ff860d;
+}
+
+/*lyInspir部分end*/
+
+#sword{
+    position: fixed;
+    bottom: 22px;
+    right: 8px;
+    cursor: pointer;
+    display: none;
+}

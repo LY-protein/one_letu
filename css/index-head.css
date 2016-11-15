@@ -1,0 +1,334 @@
+    /*site-nav部分start*/
+    .site-nav {
+        width: 100%;
+        height: 70px;
+        line-height: 70px;
+        position: absolute;
+        z-index: 2;
+        background-color: rgba(125,125,125,0.1);
+    }
+    a.site-nav-logo {
+        text-indent: -9999px;
+        float: left;
+        width: 156px;
+        height: 40px;
+        margin-top: 15px;
+        background: url("../images/logo.png");
+    }
+    .site-nav-left {
+        height: 70px;
+        width: 800px;
+    }
+    .site-nav-left ul li {
+        float: left;
+        height: 70px;
+    }
+    .site-nav-left ul li a {
+        color: #fff;
+        display: block;
+        padding: 0 15px;
+        position: relative;
+        font: 16px/70px "Microsoft YaHei";
+    }
+    .site-nav-find {
+        height: 70px;
+    }
+    .site-nav-find div {
+        height: 90px;
+        width: 100%;
+    }
+    .site-nav-find {
+        position: relative;
+    }
+    .site-nav-find div {
+        display: none;
+
+    }
+    .site-nav-find span {
+        display: block;
+        color: #fff;
+        text-align: center;
+        cursor: pointer;
+        border-bottom: 1px solid rgba(100,100,100,0.2);
+        font: 12px/30px Microsoft YaHei;
+        background-color: rgba(0,0,0,0.3);
+    }
+    .site-nav-find i {
+        position: absolute;
+        top: 33px;
+        left: 35px;
+        height: 7px;
+        width: 28px;
+        display: block;
+        overflow: hidden;
+        color: #fff;
+        font: 500 15px/15px "consolas";
+    }
+    .site-nav-find i s {
+        position: absolute;
+        top: -8px;
+        height: 15px;
+        width: 15px;
+    }
+    .site-nav-right {
+        text-align: center;
+        height: 70px;
+        width: 210px;
+        /*margin-top: 15px;*/
+    }
+    .site-nav-right .tools a {
+        margin-top: 20px;
+        float: left;
+        height: 30px;
+        width: 30px;
+        opacity: 0.6;
+        margin-right: 10px;
+        background: url("../images/icoplus.png") no-repeat right;
+    }
+    .site-nav-qq {
+        float: left;
+        margin-top: 24px;
+        height: 24px;
+        width: 85px;
+    }
+    .site-nav-qq .site-weixin{
+        float: left;
+        margin-right: 5px;
+        border-radius: 50%;
+        height: 24px;
+        width: 24px;
+        opacity: 0.6;
+        background: url("../images/hdico.png") no-repeat left;
+    }
+    .site-nav-qq .site-weibo{
+        margin-right: 5px;
+        float: left;
+        height: 24px;
+        width: 24px;
+        opacity: 0.6;
+        border-radius: 50%;
+        background: url("../images/hdico.png") no-repeat -29px;
+    }
+    .site-nav-qq .site-qq{
+        float: left;
+        height: 24px;
+        width: 24px;
+        opacity: 0.6;
+        border-radius: 50%;
+        background: url("../images/hdico.png") no-repeat right;
+    }
+
+    .site-nav-login {
+        float: right;
+
+    }
+    .site-nav-login a {
+        margin: 0 4px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .site-nav-login a:hover {
+        color: #ff7003;
+    }
+
+    .site-nav-current {
+        background-color: rgba(0,0,0,0.3);
+    }
+    /*site-nav部分end*/
+
+    /*jhxscreen部分start*/
+    .jhxscreen {
+        width: 100%;
+        height: 480px;
+        overflow: hidden;
+        position: relative;
+    }
+    .jhxscreen ul {
+        position: absolute;
+        width: 1000%;
+        height: 480px;
+    }
+    .jhxscreen ul li{
+        width: 10%;
+        height: 480px;
+        float: left;
+    }
+    /*a标签css设置背景*/
+    .jhxscreen ul li a {
+        display: block;
+        height: 480px;
+        width: 100%;
+    }
+    .jhxscreen ul li p {
+        padding-top: 420px;
+        color: #fff;
+        font-size: 25px;
+        font-family: microsoft yahei;
+        text-align: center;
+    }
+    .jhximg1{
+        background: url("../images/jhximg1.jpg");
+    }
+    .jhximg2{
+        background: url("../images/jhximg2.jpg");
+    }
+    .jhximg3{
+        background: url("../images/jhximg3.jpg");
+    }
+    .jhximg4{
+        background: url("../images/jhximg4.jpg");
+    }
+    .jhximg5{
+        background: url("../images/jhximg5.jpg");
+    }
+    .jhxscreen ol {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        bottom: 0px;
+    }
+    .jhxscreen ol li {
+        float: left;
+        width: 20%;
+        height: 2px;
+        background-color: #aaa;
+        cursor: pointer;
+        margin-top: 5px;
+        position: relative;
+    }
+    .jhxscreen ol li s {
+        position: absolute;
+        bottom: 0;
+        height: 2px;
+        background-color: #ff7003;
+    }
+    .jhxscreen ol {
+        color: rgba(22, 22, 22, 0.2);
+
+    }
+    .topLiCurrent {
+        background-color: #97dddb !important; /*s标签的背景色*/
+    }
+    .arrow {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        margin-top: -30px;
+        height: 60px;
+        color: #fff;
+        font: 400 40px/60px "simsun";
+        display: none;
+    }
+    .arrow-l {
+        width: 40px;
+        float: left;
+        border-radius: 0 10px 10px 0;
+        text-align: center;
+        cursor: pointer;
+        background-color: rgba(80, 80, 80, 0.4);
+    }
+    .arrow-r {
+        width: 40px;
+        float: right;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 10px 0 0 10px;
+        background-color: rgba(80, 80, 80, 0.4);
+    }
+    .arrow-l:hover, .arrow-r:hover {
+        background-color: rgba(10, 10, 10, 0.7);
+    }
+
+    p.new-mes {
+        height: 40px;
+        text-align: center;
+        background-color: #666;
+        color: #ddd;
+        font: 14px/40px microsoft yahei;
+    }
+    .new-mes span {
+        color: #DE5E1B;
+        font-size: 18px;
+    }
+
+    /*jhxscreen部分end*/
+    /*意见反馈-start*/
+    .mask-box img {
+        cursor: pointer;
+        position: fixed;
+        top: 90px;
+        right: 0;
+        z-index: 10;
+        opacity: 0.8;
+    }
+    .mask-box img:hover {
+        opacity: 1;
+    }
+    .mask {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+        background: rgba(0,0,0,0.6);
+        z-index: 10;
+        text-align: center;
+    }
+    .opinion {
+        width: 350px;
+        height: 350px;
+        margin: 180px auto;
+        cursor: pointer;
+        border-radius: 10px;
+        background-color: #ffffff;
+    }
+    .sp {
+        margin-left: 25px;
+        color: #555;
+        font: 700 24px/50px "微软雅黑";
+        text-align: center;
+        width: 300px;
+        height: 50px;
+        background-color: #ffffff;
+        position: relative;
+    }
+    .mask a {
+        position: absolute;
+        top: 10px;
+        right: -8px;
+        color: #fff;
+        border-radius: 50%;
+        background-color: rgba(39, 94, 222, 0.2);
+        width: 20px;
+        height: 20px;
+        font: 700 14px/20px "simsum";
+        padding-left: 2px;
+    }
+    .mask .wenzi {
+        color: #333;
+        padding-left: 10px;
+        padding-top: 8px;
+        font: 14px/18px microsoft yahei;
+        border-left: 1px solid #999;
+    }
+    .mask button {
+        margin: 10px auto 5px;
+        cursor: pointer;
+        border-radius: 4px;
+        color: orangered;
+        font: 700 16px/30px "微软雅黑";
+        width: 130px;
+        height: 30px;
+        background-color: #ffffff;
+        border:1px solid orangered;
+    }
+    .mask button:hover{
+        background-color:#ff860d;
+        color: #fff;
+        border: 1px solid #ff860d;
+    }
+    /*意见反馈-end*/
+
+

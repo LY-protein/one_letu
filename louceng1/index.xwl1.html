@@ -1,0 +1,1875 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/ybz.css"/>
+    <link rel="stylesheet" href="css.css"/>
+    <link rel="stylesheet" href="base.css"/>
+    <link rel="stylesheet" href="css/base1.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/whlindex.css"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/index-head.css"/>
+    <link rel="stylesheet" href="css/ly.css"/>
+    <link rel="stylesheet" href="css.xwl.css"/>
+    <link rel="stylesheet" href="letu.css"/>
+    <!--<script src="js/pyf-js.js"></script>-->
+    <script src="jquery-1.11.1.js"></script>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!--<script src="js/ybz.js"></script>-->
+    <script src="js/js1.js"></script>
+    <script src="js/ly.js"></script>
+    <script src="js.xwl.js"></script>
+    <script src="letu.js"></script>
+    <script>
+
+        //lyh
+        $(window).ready(function () {
+
+            $(".ad").slideDown(1000).slideUp(1500).fadeIn(1500).children("span").click(function () {
+                $(this).parent().fadeOut(1500);
+                $(".ad").css("background-color", "yellowgreen");
+            });
+            $(".main-l li").mouseenter(function () {
+                $(this).siblings("li").children(".zzhao").show();
+                $(this).children(".zzhao").hide();
+                $(this).children(".word").stop().animate({"bottom": 0}, 500);
+
+            })
+            $(".main-l li").mouseleave(function () {
+                $(this).children(".word").stop().animate({"bottom": -82}, 500);
+            })
+            $(".main-l").mouseleave(function () {
+                $(this).children("ul").children("li").children(".zzhao").hide();
+
+            })
+
+            $(".xuan1 img").animate({"left":150,"top":150,"width":390,"height":307,"border-radius": 80},2000);
+
+
+            var ul = document.getElementsByClassName("inspire-btn")[0].children[0];
+            var liArr = ul.children;
+//            console.log(liArr[0].offsetHeight);
+            //var arrow = document.getElementsByClassName("arrow1-a")[0];
+            var arrow = ul.nextElementSibling || ul.nextSibling;
+            var aArr = arrow.getElementsByTagName("a");
+            var timer1 = null;
+            var target = 0;
+            var leader = 0;
+            var img = document.getElementsByClassName("img-l")[0];
+            img.onclick = function () {
+                window.scrollTo(0,0);
+            }
+            window.onscroll = function () {
+                leader = scroll().top;
+                for (var j = 0; j < aArr.length; j++) {
+                    aArr[j].className = "";
+                }
+                var s = (leader - 6200) / liArr[0].offsetHeight;
+                if (s < 1) {
+                    s = 0;
+                }
+                var k = Math.floor(s);
+                if (k > 4) {
+                    k = 4;
+
+                }
+                aArr[k].className = "current-a";
+
+//                var arrow2 = document.getElementsByClassName("arrow1-a1")[0];
+                var arrow2 = document.getElementsByClassName("inspire-btn")[0].children[1];
+//                console.log(scroll().top);
+                if(scroll().top > 6126 && scroll().top < 9200) {
+                    console.log(1);
+                    arrow2.className += " arrow1-a";
+                }else {
+                    arrow2.className = "arrow-a1";
+
+                }
+
+            }
+            function scroll() {
+                return {
+                    "top": window.pageYOffset || document.body.scrollTop || document.documentElement.scrollTop,
+                    "left": window.pageXOffset || document.body.scrollLeft || document.documentElement.scrollLeft
+                }
+            }for (var i = 0; i < liArr.length; i++) {
+                aArr[i].index = i;
+                aArr[i].onclick = function () {
+                    for (var j = 0; j < aArr.length; j++) {
+                        aArr[j].className = "";
+                    }
+                    this.className = "current-a";
+                    target = this.index*680+6380;
+                    clearInterval(timer1);
+                    timer1 = setInterval(function () {
+                        //获取步长
+                        var step = (target - leader) / 10;
+                        step = step > 0 ? Math.ceil(step) : Math.floor(step);
+                        //赋值
+                        leader = leader + step;
+                        window.scrollTo(0, leader);
+
+                        if (Math.abs(target - leader) <= 1) {
+                            clearInterval(timer1);
+                            window.scrollTo(0, target);
+                        }
+                    }, 25);
+                }
+            }
+
+
+            addEvent("inp1", function () {
+                var p = document.getElementById("sh-p");
+                var reg = /^((13[0-9])|(15[^4,\D])|(18[0-9]))\d{8}$/;
+                if(reg.test(this.value)) {
+                    p.innerHTML = "";
+//                     p.className += " right";
+                }else {
+                    p.className += " wrong";
+                    p.innerHTML = "输入格式有误，请重新输入！";
+                }
+            });
+
+            addEvent("inp2", function () {
+                var p = document.getElementById("sh-p");
+                var reg = /^[\w-]{3,16}$/;
+                if(reg.test(this.value)) {
+                    p.innerHTML = "";
+//                     p.className += " right";
+                }else {
+                    p.className += " wrong";
+                    p.innerHTML = "输入格式有误，请重新输入！";
+                }
+            });
+            addEvent("inp3", function () {
+                var p = document.getElementById("sh-p");
+                var reg = /^[a-zA-Z0-9_-]{6,18}/;
+                if(reg.test(this.value)) {
+                    p.innerHTML = "";
+//                     p.className += " right";
+                }else {
+                    p.className += " wrong";
+                    p.innerHTML = "输入格式有误，请重新输入！";
+                }
+            });
+
+
+            function addEvent(str,fn) {
+                document.getElementById(str).onblur = fn;
+            }
+
+
+        })
+    </script>
+</head>
+<body>
+<!--site-nav-->
+<div class="site-nav">
+    <div class="w">
+        <div class="site-nav-left fl">
+            <a href="javascript:;" class="site-nav-logo">乐途旅游</a>
+            <ul>
+                <li><a href="javascript:;" class="site-nav-left-a">首页</a></li>
+                <li><a href="javascript:;" class="site-nav-left-a">午后</a></li>
+                <li><a href="javascript:;" class="site-nav-left-a">自驾</a></li>
+                <li><a href="javascript:;" class="site-nav-left-a">目的地</a></li>
+                <li class="site-nav-find">
+                    <a href="javascript:;">发现</a>
+                    <i><s>◇</s></i>
+                    <div >
+                        <span>周边游</span>
+                        <span>国内游</span>
+                        <span>出境游</span>
+                    </div>
+                </li>
+                <li><a href="javascript:;" class="site-nav-left-a">大咖</a></li>
+                <li class="site-nav-find" >
+                    <a href="javascript:;">预订</a>
+                    <i><s>◇</s></i>
+                    <div class="hide">
+                        <span>酒店</span>
+                        <span>地接</span>
+                        <span>度假</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="site-nav-right fr">
+            <div class="tools">
+                <a href="javascript:;"></a>
+            </div>
+            <div class="site-nav-qq">
+                <a href="javascript:;" class="site-weixin"></a>
+                <a href="javascript:;" class="site-weibo"></a>
+                <a href="javascript:;" class="site-qq"></a>
+            </div>
+            <div class="site-nav-login">
+                <a href="javascript:;">登陆 </a>|
+                <a href="javascript:;">注册</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--screen--start-->
+<div class="jhxscreen">
+    <ul>
+        <li><a href="javascript:;" class="jhximg4"><p>神奇北极 魅力兴安</p></a></li>
+        <li><a href="javascript:;" class="jhximg2"><p>四河之源 山水之城 ———— 辽宁清源</p></a></li>
+        <li><a href="javascript:;" class="jhximg3"><p>中国还有王族？走进南诏王室最后一个彝族部落</p></a></li>
+        <li><a href="javascript:;" class="jhximg5"><p>中国三百年前“隐形”村庄，美国卫星都查不到</p></a></li>
+        <li><a href="javascript:;" class="jhximg1"><p>紫禁城的金砖，经历了怎样的九九八十一难？</p></a></li>
+    </ul>
+    <ol>
+        <li class="topLiCurrent"><s style="width:100%;"></s></li>
+        <li><s></s></li>
+        <li><s></s></li>
+        <li><s></s></li>
+        <li><s></s></li>
+    </ol>
+    <div class="arrow">
+        <div class="arrow-l"><</div>
+        <div class="arrow-r">></div>
+    </div>
+</div>
+<div class="new-mesw">
+    <p class="new-mes">昨日新增<span>203</span>种旅游灵感，它们是由<span>78</span>位灵感旅行家，亲历<span>31</span>个国家<span>101</span>座城市整理而来。每天早6准点更新，往下看看吧~</p>
+</div>
+<!--screen--end-->
+<!--top-search  start-->
+<!--<div class="top-search">-->
+<!--<div class="w">-->
+<!--<p>嗨！我们是启发旅游灵感的网站，为你解决想玩时第一个问题。 <br/>-->
+<!--不信？现在就来搜一搜，灵感马上来。</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--top-search  end-->
+<!--意见反馈--start-->
+<div class="mask-box">
+    <img  id="tu" src="images/ltFeedback.png" alt=""/>
+    <div class="mask">
+        <div class="opinion">
+            <div class="sp">
+                <span>意见反馈</span>
+                <a href="#"id="guan">×</a>
+            </div>
+            <textarea class="wenzi" cols="40" rows="13" placeholder="亮出你的毒舌，晒晒你的想法，叨叨你的建议，让乐途为你更完美！"></textarea>
+            <button>提交</button>
+        </div>
+    </div>
+</div>
+
+<!--意见反馈--start-->
+
+
+<!--ybz-->
+<!--<div class="head-figure">-->
+    <!--<div class="clearfix"></div>-->
+    <!--<div class="f-info clearfix">-->
+        <!--<div class="fl figure-left">-->
+            <!--<div class="menu menu-beijing">-->
+                <!--<i class="i-img1"></i><i class="i-img1-hov"></i><em id="chengshi">北京周边</em>-->
+                <!--<div id="zbdiv" class="city-more city-more clearfix">-->
+                    <!--<div class="shu-list">-->
+                        <!--<ul class="list2">-->
+                            <!--<li>-->
+                                <!--<span class="s-title">摄影咖</span>-->
+                                <!--<a href="#">北京</a><span class="shu"></span>-->
+                                <!--<a href="#">应县木塔</a><span class="shu"></span>-->
+                                <!--<a href="#">太行山大峡谷</a><span class="shu"></span>-->
+                                <!--<a href="#">同里古镇</a><span class="shu"></span>-->
+                                <!--<a href="#">苍岩山</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<span class="s-title">文艺范</span>-->
+                                <!--<a href="#">北京</a><span class="shu"></span>-->
+                                <!--<a href="#">平谷</a><span class="shu"></span>-->
+                                <!--<a href="#">克什克腾地质公园阿斯哈图石林</a><span class="shu"></span>-->
+                                <!--<a href="#">千岛湖</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<span class="s-title">摄影咖</span>-->
+                                <!--<a href="#">北京</a><span class="shu"></span>-->
+                                <!--<a href="#">应县木塔</a><span class="shu"></span>-->
+                                <!--<a href="#">太行山大峡谷</a><span class="shu"></span>-->
+                                <!--<a href="#">同里古镇</a><span class="shu"></span>-->
+                                <!--<a href="#">苍岩山</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<span class="s-title">文艺范</span>-->
+                                <!--<a href="#">北京</a><span class="shu"></span>-->
+                                <!--<a href="#">平谷</a><span class="shu"></span>-->
+                                <!--<a href="#">克什克腾地质公园阿斯哈图石林</a><span class="shu"></span>-->
+                                <!--<a href="#">千岛湖</a>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="menu menu-china">-->
+                <!--<i class="i-img2"></i><i class="i-img2-hov"></i><em>国内自驾</em>-->
+
+                <!--<div class="city-more city-more2 clearfix">-->
+                    <!--<div class="shu-list">-->
+                        <!--<ul class="list2">-->
+                            <!--<li>-->
+                                <!--<span class="s-title">摄影咖</span>-->
+                                <!--<a href="#">成都</a><span class="shu"></span>-->
+                                <!--<a href="#">新都桥</a><span class="shu"></span>-->
+                                <!--<a href="#">拉萨</a><span class="shu"></span>-->
+                                <!--<a href="#">北京</a><span class="shu"></span>-->
+                                <!--<a href="#">林芝</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<span class="s-title">越野</span>-->
+                                <!--<a href="#">青海湖</a><span class="shu"></span>-->
+                                <!--<a href="#">北京</a><span class="shu"></span>-->
+                                <!--<a href="#">拉萨</a><span class="shu"></span>-->
+                                <!--<a href="#">兰州</a><span class="shu"></span>-->
+                                <!--<a href="#">乌鲁木齐</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<span class="s-title">探险家</span>-->
+                                <!--<a href="#">拉萨</a><span class="shu"></span>-->
+                                <!--<a href="#">巴塘</a><span class="shu"></span>-->
+                                <!--<a href="#">康定</a><span class="shu"></span>-->
+                                <!--<a href="#">青海湖</a><span class="shu"></span>-->
+                                <!--<a href="#">成都</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<span class="s-title">亲子</span>-->
+                                <!--<a href="#">北京</a><span class="shu"></span>-->
+                                <!--<a href="#">青海湖</a><span class="shu"></span>-->
+                                <!--<a href="#">康定</a><span class="shu"></span>-->
+                                <!--<a href="#">成都</a><span class="shu"></span>-->
+                                <!--<a href="#">天津</a>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+
+                    <!--</div>-->
+
+                <!--</div>-->
+            <!--</div>-->
+
+            <!--<div class="menu menu-no">-->
+                <!--<i class="i-img3"></i><i class="i-img3-hov"></i><em>境外自驾</em>-->
+
+                <!--<div class="city-more city-more3 clearfix">-->
+                    <!--<div class="shu-list">-->
+                        <!--<ul class="list2">-->
+                            <!--<li>-->
+                                <!--<span class="s-title">摄影咖</span>-->
+                                <!--<a href="#">拉斯维加斯</a><span class="shu"></span>-->
+                                <!--<a href="#">洛杉矶</a><span class="shu"></span>-->
+                                <!--<a href="#">旧金山</a><span class="shu"></span>-->
+                                <!--<a href="#">法兰克福</a><span class="shu"></span>-->
+                                <!--<a href="#">慕尼黑</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<span class="s-title">摄影咖</span>-->
+                                <!--<a href="#">拉斯维加斯</a><span class="shu"></span>-->
+                                <!--<a href="#">洛杉矶</a><span class="shu"></span>-->
+                                <!--<a href="#">旧金山</a><span class="shu"></span>-->
+                                <!--<a href="#">法兰克福</a><span class="shu"></span>-->
+                                <!--<a href="#">慕尼黑</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<span class="s-title">摄影咖</span>-->
+                                <!--<a href="#">拉斯维加斯</a><span class="shu"></span>-->
+                                <!--<a href="#">洛杉矶</a><span class="shu"></span>-->
+                                <!--<a href="#">旧金山</a><span class="shu"></span>-->
+                                <!--<a href="#">法兰克福</a><span class="shu"></span>-->
+                                <!--<a href="#">慕尼黑</a>-->
+                            <!--</li>-->
+
+
+                        <!--</ul>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+
+        <!--</div>-->
+        <!--<div class="fl figure-right">-->
+            <!--<div class="figure-right-lbz1">-->
+                <!--<ul>-->
+                    <!--<li id="box1ybz">-->
+                        <!--<a href="#">-->
+                            <!--<img src="images/20160713213813158942392_640.jpg" alt=""/>-->
+                        <!--</a>-->
+                        <!--<div class="mask">-->
+                            <!--<div class="mask-item-info">-->
+                                <!--人生就是冒险 不论你身在何处-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                    <!--<li id="box2ybz">-->
+                        <!--<a href="#">-->
+                            <!--<img src="images/20160901162754072424660_640.jpg" alt=""/>-->
+                        <!--</a>-->
+                        <!--<div class="mask">-->
+                            <!--<div class="mask-item-info">-->
+                                <!--90后我就这young 我为自己代言-->
+                            <!--</div>-->
+
+                        <!--</div>-->
+                    <!--</li>-->
+                    <!--<li id="box3ybz">-->
+                        <!--<a href="#">-->
+                            <!--<img src="images/20160809105104863976435_640.jpg" alt=""/>-->
+                        <!--</a>-->
+                        <!--<div class="mask">-->
+                            <!--<div class="mask-item-info">-->
+                                <!--域鉴桃花源 梦回新疆看风吹麦浪-->
+                            <!--</div>-->
+
+                        <!--</div>-->
+                    <!--</li>-->
+                    <!--<li id="box4ybz">-->
+                        <!--<a href="#">-->
+                            <!--<img src="images/20160621124003322785624_640.jpg" alt=""/>-->
+                        <!--</a>-->
+                        <!--<div class="mask">-->
+                            <!--<div class="mask-item-info">-->
+                                <!--域鉴桃花源 为找到那片海不顾一切-->
+                            <!--</div>-->
+
+                        <!--</div>-->
+                    <!--</li>-->
+                    <!--<li id="box5ybz">-->
+                        <!--<a href="#">-->
+                            <!--<img src="images/201606031509226273813_640.jpg" alt=""/>-->
+                        <!--</a>-->
+                        <!--<div class="mask">-->
+                            <!--<div class="mask-item-info">-->
+                                <!--就去没人的地方玩 罗布泊无人区探险-->
+                            <!--</div>-->
+
+                        <!--</div>-->
+                    <!--</li>-->
+                    <!--<li id="box6ybz">-->
+                        <!--<a href="#">-->
+                            <!--<img src="images/20160830162642150907346_640.jpg" alt=""/>-->
+                        <!--</a>-->
+                        <!--<div class="mask">-->
+                            <!--<div class="mask-item-info">-->
+                                <!--爱自驾草原集结赛 行走最美兴安盟-->
+                            <!--</div>-->
+
+                        <!--</div>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+            <!--<div class="figure-right-lbz2">-->
+                <!--<ul>-->
+                    <!--<li></li>-->
+                    <!--<li></li>-->
+                    <!--<li></li>-->
+                    <!--<li></li>-->
+                    <!--<li></li>-->
+                    <!--<li></li>-->
+                <!--</ul>-->
+            <!--</div>-->
+            <!--<div class="figure-right-lbz3"></div>-->
+            <!--<div class="figure-right-lbz4"></div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<!--<div class="imgborder">-->
+    <!--<ul>-->
+        <!--<li class="imgborli"><img src="images/20160620134058666877352_640.jpg" alt=""/></li>-->
+        <!--<li class="imgborli" id="imgborli1"><img src="images/20160726165338171316115_640.jpg" alt=""/></li>-->
+        <!--<li class="imgborli"><img src="images/20160620105856979969503_640.jpg" alt=""/></li>-->
+        <!--<li class="imgborli" id="imgborli2"><img src="images/20160619153930133945252_640.jpg" alt=""/></li>-->
+    <!--</ul>-->
+<!--</div>-->
+
+
+
+<!--闪动部分lyh-->
+<div class="main">
+    <div class="main-l">
+        <ul>
+            <li>
+                <div class="zzhao"></div>
+                <img src="images/20160615222729524508360_640.jpg" style="width: 390px" class="bgimg"/>
+
+
+                <div class="word">
+                    <a href="#">
+                        雾里村---又见炊烟
+                    </a>
+
+                    <div class="zz">
+                        <img src="images/201510291627077328357_86.JPG" class="ximg"/>
+
+                        <div class="cont">
+                            <p class="name">亦行亦影</p>
+
+                            <p>新浪名博、携程旅行家、五洲图片库签约摄影师、自由撰稿人 旅行公众号：yxyy</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="zzhao"></div>
+                <img src="images/20160910161237282960971_640.jpg" style="width: 390px"/>
+
+                <a>诗画酉阳·游在诗里，吃在画中</a>
+
+                <div class="word">
+                    <a href="#">
+                        去金海湖见毕加索 不期而遇或蓄谋已久 金海湖
+                    </a>
+
+                    <div class="zz">
+                        <img src="images/2016062916032652548940_86.JPG" class="ximg"/>
+
+                        <div class="cont">
+                            <p class="name">彩虹帮二当家</p>
+
+                            <p>旅行家，摄影师，客栈小老板……这些都是梦想</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="no">
+                <div class="zzhao"></div>
+                <img src="images/20160910162511358110453_640.jpg" style="width: 390px"/>
+
+                <a>九寨的童话世界，你</a>
+
+                <div class="word">
+                    <a href="#">
+                        坝上“野战”，太癫狂
+                    </a>
+
+                    <div class="zz">
+                        <img src="images/20151211094639869937418_86.jpg" class="ximg"/>
+
+                        <div class="cont">
+                            <p class="name">sunny_小熊</p>
+
+                            <p>去哪儿网聪明旅行家 去哪儿网试睡员 携程旅行家 驴妈妈旅游达人</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="zzhao"></div>
+                <img src="images/20160910164315678376338_910.jpg" style="width: 390px;height:307px;" class="bgimg"/>
+
+
+                <div class="word">
+                    <a href="#">
+                        第三极，梦幻而又遥不可及
+                    </a>
+
+                    <div class="zz">
+                        <img src="images/2015111216082447620611_86.jpg" class="ximg"/>
+
+                        <div class="cont">
+                            <p class="name">刘笑嘉</p>
+
+                            <p>畅销书作家，“全世界给我勇气”公益活动发起人，出版图书作品《我怕没有机会》</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="zzhao"></div>
+                <img src="images/20151209114151776931730_640.jpg" style="width: 390px"/>
+
+                <a>诗画酉阳·游在诗里，吃在画中</a>
+
+                <div class="word">
+                    <a href="#">
+                        九寨的童话世界，你还在犹豫吗
+                    </a>
+
+                    <div class="zz">
+                        <img src="images/20160226200403562770289_86.jpg" class="ximg"/>
+
+                        <div class="cont">
+                            <p class="name">尔冬</p>
+
+                            <p>一个不愿重复、热爱美且崇尚自由的人</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="no">
+                <div class="zzhao"></div>
+                <img src="images/20160412230753027458219_640.jpg" style="width: 390px"/>
+
+                <a>九寨的童话世界，你</a>
+
+                <div class="word">
+                    <a href="#">
+                        诗画酉阳·游在诗里，吃在画中
+                    </a>
+
+                    <div class="zz">
+                        <img src="images/20160307202734745309641_86.jpg" class="ximg"/>
+
+                        <div class="cont">
+                            <p class="name">Cindy恰北北</p>
+
+                            <p>自由撰稿人，半调摄影师，杂志专栏作者，去哪儿旅行家。一片星空一壶酒，走最</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+</div>
+
+
+<!--pyf-->
+
+<div id="lyFind">
+    <h5 class="findTitle">
+        <a href="#">来自专业评鉴的全球灵感榜单，等你来发现</a>
+    </h5>
+    <p class="findIntro">Recommended global travel inspirations from professional evaluation, just for you.</p>
+    <div class="findContent">
+        <div class="find find1">
+            <div class="pic findPic1">
+                <a href="javascript:void(0);"><img src="images/ly1.jpg"/></a>
+                <div class="mask">
+                    <em>
+                        <span>“冰河世纪”的<br/>天鹅湖</span>
+                    </em>
+                    <p class="disp">
+                        <a href="javascript:void(0);">冰雪</a>
+                        <a href="javascript:void(0);">动物</a>
+                    </p>
+                </div>
+                <p class="cornor">品推</p>
+            </div>
+            <div class="findtit">
+                <h5><a href="javascript:void(0);">去陆地海岸线的最东段 看一场</a></h5>
+                <div class="inspIntro">
+                    <a class="findGo" href="javascript:void(0);"><span>天鹅湖</span></a>
+                    <span class="lover">2.5万</span>
+                </div>
+            </div>
+            <div class="findtravel">
+                <a class="fl" href="javascript:void(0)";>
+                    <img src="images/ly7.jpg" width="30px"/>
+                </a>
+                <div class="findP">
+                    <a href="javascript:void(0);">文登区旅游局</a>
+                    <p>文登，多种文化在这里积淀形成 “文登</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="find find2">
+            <div class="pic findPic2">
+                <a href="javascript:void(0);"><img src="images/ly2.jpg"/></a>
+                <div class="mask">
+                    <em>
+                        <span>道骨仙风的<br/>野性之美</span>
+                    </em>
+                    <p class="disp">
+                        <a href="javascript:void(0);">峡谷</a>
+                    </p>
+                </div>
+                <p class="cornor1">品推</p>
+            </div>
+            <div class="findtit">
+                <h5><a href="javascript:void(0);">梅州平远——藏住野性的地方</a></h5>
+                <div class="inspIntro">
+                    <a class="findGo" href="javascript:void(0);"><span>梅州</span></a>
+                    <span class="lover">4.7万</span>
+                </div>
+            </div>
+            <div class="findtravel">
+                <a class="fl" href="javascript:void(0)";>
+                    <img src="images/ly8.jpg" width="30px"/>
+                </a>
+                <div class="findP">
+                    <a href="javascript:void(0);">多年以后</a>
+                    <p>新浪博客，多年以后。 大学老师。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="find find3">
+            <div class="pic findPic3">
+                <a href="javascript:void(0);"><img src="images/ly3.jpg"/></a>
+                <div class="mask">
+                    <em>
+                        <span>苗寨里的<br/>孩儿千面</span>
+                    </em>
+                    <p class="disp">
+                        <a href="javascript:void(0);">趣味节庆</a>
+                        <a href="javascript:void(0);">特色住宿</a>
+                        <a href="javascript:void(0);">文艺范</a>
+                    </p>
+                </div>
+            </div>
+            <div class="findtit">
+                <h5><a href="javascript:void(0);">西江千户苗寨｜之孩童的模样</a></h5>
+                <div class="inspIntro">
+                    <a class="findGo" href="javascript:void(0);"><span>西江千户苗寨</span></a>
+                    <span class="lover">2万</span>
+                </div>
+            </div>
+            <div class="findtravel">
+                <a class="fl" href="javascript:void(0)";>
+                    <img class="squl" src="images/ly5.jpg" width="30px"/>
+                </a>
+                <div class="findP">
+                    <a href="javascript:void(0);">极微细色</a>
+                    <p>工作。旅行。素食。信仰。摄影。写字。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="find find4">
+            <div class="pic findPic4">
+                <a href="javascript:void(0);"><img src="images/ly4.jpg"/></a>
+                <div class="mask">
+                    <em>
+                        <span>井下探秘<br/>地底的世界</span>
+                    </em>
+                    <p class="disp">
+                        <a href="javascript:void(0);">灾难遗迹</a>
+                        <a href="javascript:void(0);">博物馆</a>
+                        <a href="javascript:void(0);">纪念馆</a>
+                        <a href="javascript:void(0);">博物园</a>
+                    </p>
+                </div>
+            </div>
+            <div class="findtit">
+                <h5><a href="javascript:void(0);">开滦“井下探秘”穿越之旅</a></h5>
+                <div class="inspIntro">
+                    <a class="findGo" href="javascript:void(0);"><span>唐山</span></a>
+                    <span class="lover">11.22万</span>
+                </div>
+            </div>
+            <div class="findtravel">
+                <a class="fl" href="javascript:void(0)";>
+                    <img class="squl" src="images/ly6.jpg" width="30px"/>
+                </a>
+                <div class="findP">
+                    <a href="javascript:void(0);">lovemy凤凰</a>
+                    <p>行于人间的感动，经历世事的成长，纵情</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="lyTheme">
+    <h5 class="themeTitle">缤纷呈现，全球最有趣的主题活动<br/>
+        想FUN肆？现在就带上你的好奇心，一起来体验吧！
+    </h5>
+    <div class="themeContent">
+        <div class="content content1">
+            <div class="boxAll">
+                <ul class="scroll">
+                    <li>
+                        <p class="scrInt">绚丽的风景油画</p>
+                    </li>
+                    <li>
+                        <p class="scrInt">梦回大宋 遇包公</p>
+                        <p class="cornor2">推广</p>
+                    </li>
+                    <li>
+                        <p class="scrInt">感受最浓苗族文化</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="introAll">
+                <p class="listIntro1">图片文字介绍加载中……</p>
+            </div>
+        </div>
+        <div class="content content2">
+            <div class="boxAll">
+                <ul class="scroll">
+                    <li>
+                        <p class="scrInt">同一片海，有几种蓝</p>
+                    </li>
+                    <li>
+                        <p class="scrInt">白天鹅的魅力蜕变</p>
+                    </li>
+                    <li>
+                        <p class="scrInt">走心的徒步之旅</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="introAll">
+                <p class="listIntro2">图片文字介绍加载中……</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="lyBanner">
+    <div class="bannerPic">
+        <div class="bannerAll">
+            <h5 class="bannerTitle">摄影师眼中的大兴安岭之秋，金色的油画世界</h5>
+            <img class="linePic" src="images/ly15.jpg" title="冰城馨子"/>
+            <i class="line"></i>
+            <p class="bannerName">冰城馨子</p>
+            <p class="bannerGo">Go In</p>
+        </div>
+        <!--<img class="banTianshi" src="images/tianshi.gif" alt="我是你の天使"/>-->
+    </div>
+</div>
+<div id="lyInspir">
+    <h5 class="inspirTitle">
+        <a href="#">发现国内灵感</a>
+    </h5>
+    <p class="inspirIntro">China tourism inspirations</p>
+    <p class="inspirText">TA们是永不止步的发现者，就在刚刚又发布了新的国内灵感，小伙伴们快来关注</p>
+    <p class="inspirDisp">
+        <a href="javascript:void(0);"><img class="insSmaPic" src="images/ly16.jpg" title="宁宁"/></a>
+        <a href="javascript:void(0);"><img class="insSmaPic" src="images/ly17.jpg" title="老李"/></a>
+        <a href="javascript:void(0);"><img class="insSmaPic" src="images/ly18.jpg" title="雅丽"/></a>
+        <a href="javascript:void(0);"><img class="insSmaPic" src="images/ly19.jpg" title="小石头"/></a>
+        <a href="javascript:void(0);"><img class="insSmaPic" src="images/ly20.jpg" title="畅"/></a>
+        <a href="javascript:void(0);"><img class="insSmaPic" src="images/ly21.jpg" title="建哥"/></a>
+        <a href="javascript:void(0);"><img class="insSmaPic" src="images/ly22.jpg" title="丁洋"/></a>
+        <a href="javascript:void(0);"><img class="insSmaPic" src="images/ly23.jpg" title="刘世纪"/></a>
+        <a href="javascript:void(0);"><img class="insSmaPic" src="images/ly24.jpg" title="张丹"/></a>
+        <a href="javascript:void(0);"><img class="insSmaPic" src="images/ly25.jpg" title="AngleBaby"/></a>
+        <a href="javascript:void(0);"><img class="insSmaPic" src="images/ly26.jpg" title="骆丹"/></a>
+        <a href="javascript:void(0);"><img class="insSmaPic" src="images/ly27.jpg" title="晴天"/></a>
+        <a href="javascript:void(0);"><img src="images/ly28.png"/></a>
+    </p>
+    <div class="insContent">
+        <ul class="insCon">
+            <li>
+                <img src="images/ly32.jpg"/>
+                <em>
+                    <span>"彝族美少女"的<br/>独特美</span>
+                </em>
+                <div class="insMask">
+                    <p class="insDisp">
+                        <a href="javascript:void(0);">丽江</a>
+                        <a href="javascript:void(0);">苏州小巷</a>
+                    </p>
+                    <span class="maskL">丽江</span>
+                    <span class="maskR">22.22万</span>
+                </div>
+                <p class="insSay">丽江，一个人人都爱的地带</p>
+            </li>
+            <li>
+                <img src="images/ly33.jpg"/>
+                <em>
+                    <span>小松鼠眼中的<br/>世界</span>
+                </em>
+                <div class="insMask">
+                    <p class="insDisp">
+                        <a href="javascript:void(0);">江南</a>
+                        <a href="javascript:void(0);">动物</a>
+                    </p>
+                    <span class="maskL">拉萨</span>
+                    <span class="maskR">12.2万</span>
+                </div>
+                <p class="insSay">小眼睛看大世界，总是那么好奇</p>
+            </li>
+            <li>
+                <img src="images/ly38.jpg"/>
+                <em>
+                    <span>享受心灵的<br/>一场精髓的洗礼</span>
+                </em>
+                <div class="insMask">
+                    <p class="insDisp">
+                        <a href="javascript:void(0);">心灵美</a>
+                        <a href="javascript:void(0);">展望未来</a>
+                        <a href="javascript:void(0);">恬静</a>
+                    </p>
+                    <span class="maskL">故乡古都</span>
+                    <span class="maskR">8.8万</span>
+                </div>
+                <p class="insSay">只要你喜欢，我随时给你爱</p>
+            </li>
+            <li class="insLast">
+                <img src="images/ly42.jpg"/>
+                <em>
+                    <span>宁静的美食<br/>给你淡淡的爱</span>
+                </em>
+                <div class="insMask">
+                    <p class="insDisp">
+                        <a href="javascript:void(0);">美食</a>
+                        <a href="javascript:void(0);">烹饪</a>
+                        <a href="javascript:void(0);">妈妈的味道</a>
+                    </p>
+                    <span class="maskL">北京</span>
+                    <span class="maskR">2.2万</span>
+                </div>
+                <p class="insSay">家的味道，家的幸福</p>
+            </li>
+            <li>
+                <img src="images/ly34.jpg"/>
+                <em>
+                    <span>五彩缤纷的<br/>大自然</span>
+                </em>
+                <div class="insMask">
+                    <p class="insDisp">
+                        <a href="javascript:void(0);">松树</a>
+                        <a href="javascript:void(0);">柏树</a>
+                        <a href="javascript:void(0);">杨树</a>
+                        <a href="javascript:void(0);">槐树</a>
+                        <a href="javascript:void(0);">骷髅树</a>
+                        <a href="javascript:void(0);">展望树</a>
+                    </p>
+                    <span class="maskL">长白山</span>
+                    <span class="maskR">6.78万</span>
+                </div>
+                <p class="insSay">长白山的天池人人都大爱</p>
+            </li>
+            <li>
+                <img src="images/ly37.jpg"/>
+                <em>
+                    <span>“高山”的<br/>瀑布流</span>
+                </em>
+                <div class="insMask">
+                    <p class="insDisp">
+                        <a href="javascript:void(0);">瀑布</a>
+                        <a href="javascript:void(0);">喷泉</a>
+                    </p>
+                    <span class="maskL">天津</span>
+                    <span class="maskR">5.63万</span>
+                </div>
+                <p class="insSay">总是想身临其境</p>
+            </li>
+            <li>
+                <img src="images/ly39.jpg"/>
+                <em>
+                    <span>古玩物<br/>精品集中地</span>
+                </em>
+                <div class="insMask">
+                    <p class="insDisp">
+                        <a href="javascript:void(0);">古玩物</a>
+                        <a href="javascript:void(0);">精品摆件</a>
+                    </p>
+                    <span class="maskL">浙江</span>
+                    <span class="maskR">3.2万</span>
+                </div>
+                <p class="insSay">古玩人的世界你不懂</p>
+            </li>
+            <li class="insLast">
+                <img src="images/ly43.jpg"/>
+                <em>
+                    <span>糯米糍</span>
+                </em>
+                <div class="insMask">
+                    <p class="insDisp">
+                        <a href="javascript:void(0);">陷</a>
+                        <a href="javascript:void(0);">红豆</a>
+                    </p>
+                    <span class="maskL">宁夏</span>
+                    <span class="maskR">33.4万</span>
+                </div>
+                <p class="insSay">只要你吃你就会爱上</p>
+            </li>
+            <li>
+                <img src="images/ly35.jpg"/>
+                <em>
+                    <span>北京的夜晚</span>
+                </em>
+                <div class="insMask">
+                    <p class="insDisp">
+                        <a href="javascript:void(0);">酒吧</a>
+                        <a href="javascript:void(0);">嗨</a>
+                    </p>
+                    <span class="maskL">北京</span>
+                    <span class="maskR">52.2万</span>
+                </div>
+                <p class="insSay">去酒吧享受生活，感受宁静</p>
+            </li>
+            <li>
+                <img src="images/ly36.jpg"/>
+                <em>
+                    <span>重温<br/>港剧中的街景</span></em><div class="insMask">
+                <p class="insDisp">
+                    <a href="javascript:void(0);">香港</a>
+                    <a href="javascript:void(0);">澳门</a>
+                </p>
+                <span class="maskL">香港</span>
+                <span class="maskR">33.22万</span>
+            </div><p class="insSay">漫步香港，寻访似曾相识</p></li><li>
+            <img src="images/ly41.jpg"/>
+            <em>
+                <span>漫步雨中<br/>尽享蓝天</span>
+            </em>
+            <div class="insMask">
+                <p class="insDisp">
+                    <a href="javascript:void(0);">蓝天</a>
+                    <a href="javascript:void(0);">空旷</a>
+                </p>
+                <span class="maskL">大自然</span>
+                <span class="maskR">62.2万</span>
+            </div>
+            <p class="insSay">纯净的美给你纯净的享受</p>
+        </li>
+            <li class="insLast">
+                <img src="images/ly40.jpg"/>
+                <em>
+                    <span>日喀则<br/>不可错过的行摄天堂</span>
+                </em>
+                <div class="insMask">
+                    <p class="insDisp">
+                        <a href="javascript:void(0);">日喀则</a>
+                        <a href="javascript:void(0);">天堂</a>
+                    </p>
+                    <span class="maskL">日喀则</span>
+                    <span class="maskR">9.8万</span>
+                </div>
+                <p class="insSay">日喀则，必去的经典</p>
+            </li>
+        </ul>
+        <div class="insArr">
+            <span class="insLeft"><</span>
+            <span class="insRight">></span>
+        </div>
+    </div>
+</div>
+
+<!--qzq-->
+<div class="qzq-index-srh clearfix:after ">
+    <p>嗨！我们是启发旅游灵感的网站，为你解决想玩时第一个问题。<br>
+        不信？现在就来搜一搜，灵感马上来。</p>
+    <div class="qzq-inp">
+
+
+        <input type="text" value="搜索目的地/旅行家/用户" />
+
+
+
+        <div class="qzq-mdd">
+            <div class="qzq-mdd-1">
+                <img src="image/qzq-gj.png" class="fl"/>
+                <img src="image/qzq-gb.png" class="qzq-gb fr"/>
+            </div>
+            <div class="qzq-mdd-2">
+                <ul>
+                    <li>抚远</li>
+                    <li>昌都</li>
+                    <li>杭州</li>
+                </ul>
+                <ul>
+                    <li>龟峰</li>
+                    <li>哈尔滨</li>
+                    <li>辽宁</li>
+                </ul>
+                <ul>
+                    <li>许昌</li>
+                    <li>威海文登</li>
+                    <li>青岛</li>
+                </ul>
+                <ul>
+                    <li>山南</li>
+                    <li>成都</li>
+                    <li>阿勒泰</li>
+                </ul>
+                <ul>
+                    <li>石林</li>
+                    <li>徽州</li>
+                    <li>大兴安岭</li>
+                </ul>
+
+            </div>
+            <div class="qzq-mdd-3">
+                <img src="image/qzq-cj.png" class="fl"/>
+
+            </div>
+            <div class="qzq-mdd-4">
+                <ul>
+                    <li>抚远</li>
+                    <li>昌都</li>
+                    <li>杭州</li>
+                </ul>
+                <ul>
+                    <li>龟峰</li>
+                    <li>哈尔滨</li>
+                    <li>辽宁</li>
+                </ul>
+                <ul>
+                    <li>许昌</li>
+                    <li>威海文登</li>
+                    <li>青岛</li>
+                </ul>
+                <ul>
+                    <li>山南</li>
+                    <li>成都</li>
+                    <li>阿勒泰</li>
+                </ul>
+                <ul>
+                    <li>石林</li>
+                    <li>徽州</li>
+                    <li>大兴安岭</li>
+                </ul>
+            </div>
+        </div>
+        <div class="qzq-inp-rs">
+            <span>热搜 :</span>
+            <a href="#">去哪儿贴秋膘</a>
+            <a href="#">柔情水乡</a>
+            <a href="#">登高望远</a>
+        </div>
+
+        <p class="qzq-wz">不要眨眼，还有N种好玩的兴趣主题，等你来探索</p>
+        <span class="qzq-sp">Recommended many kinds of tourism interests, just for you</span>
+
+    </div>
+</div>
+<!--轮播图-->
+<div class="qzq-lbt">
+    <div class="qzq-an">
+        <a class="qzq-left" href="javascript:;"><</a>
+        <a class="qzq-right" href="javascript:;">></a>
+    </div>
+    <div class="qzq-lbt-1">
+
+        <ul>
+            <li>
+                <a href="">
+                    <img src="image/qzq-cy.jpg" alt=""/>
+                    <span>草原</span>
+                </a>
+                <span>有202种草原灵感等你探索<br>它们由139位旅行家亲历整理</span>
+                <div class="qzq-1">
+                    <img src="image/qzq-1.jpg" alt=""/>
+                    <img src="image/qzq-2.jpg" alt=""/>
+                    <img src="image/qzq-3.jpg" alt=""/>
+                    <img src="image/qzq-x1.png" alt=""/>
+                </div>
+            </li>
+            <li>
+                <a href="">
+                    <img src="image/qzq-sm.jpg" alt=""/>
+                    <span>沙漠</span>
+                </a>
+                <span>有122种沙漠灵感等你探索<br>
+它们由100位旅行家亲历整理</span>
+                <div class="qzq-1">
+                    <img src="image/qzq-10.jpg" alt=""/>
+                    <img src="image/qzq-5.jpg" alt=""/>
+                    <img src="image/qzq-21.jpg" alt=""/>
+                    <img src="image/qzq-x1.png" alt=""/>
+                </div>
+            </li>
+            <li>
+                <a href="">
+                    <img src="image/qzq-sl.jpg" alt=""/>
+                    <span>森林</span>
+                </a>
+                <span>有202种草原灵感等你探索<br>它们由139位旅行家亲历整理</span>
+                <div class="qzq-1">
+                    <img src="image/qzq-1.jpg" alt=""/>
+                    <img src="image/qzq-22.jpg" alt=""/>
+                    <img src="image/qzq-23.jpg" alt=""/>
+                    <img src="image/qzq-x1.png" alt=""/>
+                </div>
+            </li>
+            <li>
+                <a href="">
+                    <img src="image/qzq-ysyq.jpg" alt=""/>
+                    <span>艺术园区</span>
+                </a>
+                <span>有202种草原灵感等你探索<br>它们由139位旅行家亲历整理</span>
+                <div class="qzq-1">
+                    <img src="image/qzq-1.jpg" alt=""/>
+                    <img src="image/qzq-2.jpg" alt=""/>
+                    <img src="image/qzq-3.jpg" alt=""/>
+                    <img src="image/qzq-x1.png" alt=""/>
+                </div>
+            </li>
+            <li>
+                <a href="">
+                    <img src="image/qzq-xc.jpg" alt=""/>
+                    <span>乡村</span>
+                </a>
+                <span>有202种草原灵感等你探索<br>它们由139位旅行家亲历整理</span>
+                <div class="qzq-1">
+                    <img src="image/qzq-17.jpg" alt=""/>
+                    <img src="image/qzq-12.jpg" alt=""/>
+                    <img src="image/qzq-9.jpg" alt=""/>
+                    <img src="image/qzq-x1.png" alt=""/>
+                </div>
+            </li>
+            <li>
+                <a href="">
+                    <img src="image/qzq-syk.jpg" alt=""/>
+                    <span>摄影咖</span>
+                </a>
+                <span>有625种摄影咖灵感等你探索<br>
+它们由267位旅行家亲历整理</span>
+                <div class="qzq-1">
+                    <img src="image/qzq-21.jpg" alt=""/>
+                    <img src="image/qzq-2.jpg" alt=""/>
+                    <img src="image/qzq-3.jpg" alt=""/>
+                    <img src="image/qzq-x1.png" alt=""/>
+                </div>
+            </li>
+            <li>
+                <a href="">
+                    <img src="image/qzq-wyf.jpg" alt=""/>
+                    <span>文艺范</span>
+                </a>
+                <span>有202种草原灵感等你探索<br>它们由139位旅行家亲历整理</span>
+                <div class="qzq-1">
+                    <img src="image/qzq-19.jpg" alt=""/>
+                    <img src="image/qzq-5.jpg" alt=""/>
+                    <img src="image/qzq-8.jpg" alt=""/>
+                    <img src="image/qzq-x1.png" alt=""/>
+                </div>
+            </li>
+            <li>
+                <a href="">
+                    <img src="image/qzq-mrgj.jpg" alt=""/>
+                    <span>名人故居</span>
+                </a>
+                <span>有202种草原灵感等你探索<br>它们由139位旅行家亲历整理</span>
+                <div class="qzq-1">
+                    <img src="image/qzq-14.jpg" alt=""/>
+                    <img src="image/qzq-12.jpg" alt=""/>
+                    <img src="image/qzq-6.jpg" alt=""/>
+                    <img src="image/qzq-x1.png" alt=""/>
+                </div>
+            </li>
+            <li>
+                <a href="">
+                    <img src="image/qzq-hdht.jpg" alt=""/>
+                    <span>海滩海岛</span>
+                </a>
+                <span>有202种草原灵感等你探索<br>它们由139位旅行家亲历整理</span>
+                <div class="qzq-1">
+                    <img src="image/qzq-16.jpg" alt=""/>
+                    <img src="image/qzq-2.jpg" alt=""/>
+                    <img src="image/qzq-9.jpg" alt=""/>
+                    <img src="image/qzq-x1.png" alt=""/>
+                </div>
+            </li>
+            <li>
+                <a href="">
+                    <img src="image/qzq-qs.jpg" alt=""/>
+                    <span>潜水</span>
+                </a>
+                <span>有74种潜水灵感等你探索<br>
+它们由54位旅行家亲历整理</span>
+                <div class="qzq-1">
+                    <img src="image/qzq-1.jpg" alt=""/>
+                    <img src="image/qzq-17.jpg" alt=""/>
+                    <img src="image/qzq-3.jpg" alt=""/>
+                    <img src="image/qzq-x1.png" alt=""/>
+                </div>
+            </li>
+            <li>
+                <a href="">
+                    <img src="image/qzq-mrgj.jpg" alt=""/>
+                    <span>名人故居</span>
+                </a>
+                <span>有202种草原灵感等你探索<br>它们由139位旅行家亲历整理</span>
+                <div class="qzq-1">
+                    <img src="image/qzq-11.jpg" alt=""/>
+                    <img src="image/qzq-2.jpg" alt=""/>
+                    <img src="image/qzq-13.jpg" alt=""/>
+                    <img src="image/qzq-x1.png" alt=""/>
+                </div>
+            </li>
+            <li>
+                <a href="">
+                    <img src="image/qzq-sd.jpg" alt=""/>
+                    <span>书店</span>
+                </a>
+                <span>有202种草原灵感等你探索<br>它们由139位旅行家亲历整理</span>
+                <div class="qzq-1">
+                    <img src="image/qzq-1.jpg" alt=""/>
+                    <img src="image/qzq-12.jpg" alt=""/>
+                    <img src="image/qzq-6.jpg" alt=""/>
+                    <img src="image/qzq-x1.png" alt=""/>
+                </div>
+            </li>
+            <li>
+                <a href="">
+                    <img src="image/qzq-fqjq.jpg" alt=""/>
+                    <span>风情街区</span>
+                </a>
+                <span>有202种草原灵感等你探索<br>它们由139位旅行家亲历整理</span>
+                <div class="qzq-1">
+                    <img src="image/qzq-1.jpg" alt=""/>
+                    <img src="image/qzq-7.jpg" alt=""/>
+                    <img src="image/qzq-9.jpg" alt=""/>
+                    <img src="image/qzq-x1.png" alt=""/>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+
+<!-- whl -->
+<!--维纳斯图片-->
+<div class="index-c-list">
+    <div class="in">
+        <ul class="clearfix">
+            <li>
+                <a href="#" target="_blank" >
+                    <img src="images/w1.jpg" style="display: inline;">
+                    <em>
+                        <span class="t2">
+                            <marquee direction="right" behavior="alternate" scrollamount="2" onMouseOver="this.stop()" onMouseOut="this.start();">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;地铁站里<br>偶遇断臂维纳斯</marquee>
+                        </span>
+                    </em>
+                </a>
+                <p class="city clearfix">
+                    <a target="_blank" href="#" >都市风情</a>
+                </p>
+                <h5><a href="#" target="_blank" >遇见维纳斯，竟是在巴黎地铁站</a></h5>
+                <p class="tool">
+                    <a href="#" target="_blank" title="巴黎" >巴黎</a>
+                    <i>2.1万</i>
+                </p>
+            </li>
+            <li>
+                <a href="#" target="_blank" >
+                    <img src="images/w2.jpg"  style="display: inline;">
+                    <em>
+                        <span class="t2">
+                            <marquee direction="left" behavior="alternate" scrollamount="2" onMouseOver="this.stop()" onMouseOut="this.start();">&nbsp;&nbsp;&nbsp;一家酒店<br>好似一个帝国</marquee>
+                        </span>
+                    </em>
+                </a>
+                <p class="city clearfix">
+                    <a target="_blank" href="#" >特色住宿</a>
+                </p>
+                <h5><a href="#" target="_blank" >失落的帝国，亚特兰蒂斯</a></h5>
+                <p class="tool">
+                    <a href="#" target="_blank" title="迪拜酋长国">迪拜酋长国</a>
+                    <i>2万</i>
+                </p>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--今日灵感导师-->
+<div class="index-teacher-top">
+    <h5>今日灵感导师</h5>
+    <p>TA们来自五湖四海，TA们背着行囊走遍世界，TA们用探索的目光去发现这颗未知的星球<br>
+        用经历与见识给万千人带来新的旅游灵感</p>
+</div>
+<div class="index-teacher-bot">
+    <div class="index-teacher-bot-bg">
+        <h2>向东向北（李昕）<span><em>LOTOUR</em>专栏作家</span></h2>
+        <a href="#"></a>
+        <a href="#"></a>
+        <span><i></i></span>
+
+        <ul class="index-teacher-bot-cen">
+            <li  class="weibo">
+                <div>
+                    <p>我的微博 <em>向东向北李昕</em></p>
+                    <p>微博号 <em>向东向北李昕</em></p>
+                </div>
+                <i></i>
+            </li>
+
+            <li class="touxiang">
+                <a href="#" target="_blank" ><img src="images/touxiang.jpg"></a>
+            </li>
+
+            <li class="weixin">
+                <i></i>
+                <div>
+                    <p style="color:#292846;" class="wei-pc">我的微信 <em class="weixin-number">lixin8s76</em></p>
+                    <p style="color:#292846;" class="wei-web">微信号 <em class="weixin-number">lixin8s76</em></p>
+                </div>
+            </li>
+        </ul>
+
+        <div class="intr clearfix">
+            <h1><a href="#" target="_blank" >向东向北（李昕）</a></h1>
+            <p><a href="#" target="_blank" >中国摄影师协会会员，中华网签约自媒体，搜狐自媒体，自由撰稿人，自由摄影师。</a></p>
+            <p class="num">1385万+</p>
+            <p class="liulan-num">浏览量</p>
+        </div>
+
+        <div class="lg-num">
+            <a href="#" target="_blank" >灵感文数（15）</a>
+        </div>
+
+    </div>
+</div>
+
+
+<!--旅行家推荐-->
+
+<div class="index-tourist-bg">
+    <div class="index-tourist">
+        <div class="clearfix">
+            <div class="fl">
+                <div class="fl-top">
+                    <h6><a href="#" title="每周优秀灵感旅行家推荐">每周优秀灵感旅行家推荐</a></h6>
+                    <ul class="author clearfix">
+                        <li>
+                            <a href="#" title="方舟伊人">
+                                <img src="images/w3.jpg">
+                            </a>
+                            <h5><a href="#" title="方舟伊人">方舟伊人</a></h5>
+                            <p>总阅读量：<span>22万+</span> 文章数：<span>1</span></p>
+                        </li>
+                        <li>
+                            <a href="#" title="沈小娴">
+                                <img src="images/w4.jpg">
+                            </a>
+                            <h5><a href="#" title="沈小娴">沈小娴</a></h5>
+                            <p>总阅读量：<span>22万+</span> 文章数：<span>1</span></p>
+                        </li>
+                        <li>
+                            <a href="#" title="丁丁旅行">
+                                <img src="images/w5.jpg">
+                            </a>
+                            <h5><a href="#" title="丁丁旅行">丁丁旅行</a></h5>
+                            <p>总阅读量：<span>22万+</span> 文章数：<span>1</span></p>
+                        </li>
+                        <li>
+                            <a href="#" title="牛奔走天下">
+                                <img src="images/w6.jpg">
+                            </a>
+                            <h5><a href="#" title="牛奔走天下">牛奔走天下</a></h5>
+                            <p>总阅读量：<span>22万+</span> 文章数：<span>1</span></p>
+                        </li>
+                        <li>
+                            <a href="#" title="渝帆">
+                                <img src="images/w7.jpg">
+                            </a>
+                            <h5><a href="#" title="渝帆">渝帆</a></h5>
+                            <p>总阅读量：<span>22万+</span> 文章数：<span>1</span></p>
+                        </li>
+                        <li>
+                            <a href="#" title="淡雅如菊">
+                                <img src="images/w8.jpg">
+                            </a>
+                            <h5><a href="#" title="淡雅如菊">方舟伊人</a></h5>
+                            <p>总阅读量：<span>22万+</span> 文章数：<span>1</span></p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="fl-cen clearfix">
+                    <div class="left">
+                        <a href="#">专栏作家登录</a>
+                        <p>马上点亮世界万千旅游灵感</p>
+                    </div>
+                    <div class="right">
+                        <a href="#">立刻<span>申请</span></a>
+                        <p>来成为一名有态度的灵感导师</p>
+                    </div>
+                </div>
+                <div class="fl-bottom">
+                    <h6><a href="#" target="_blank" title="旅游局专栏">旅游局专栏</a></h6>
+                    <ul class="clearfix">
+                        <li><a href="#" title="美国国家旅游局">美国国家旅游局</a></li>
+                        <li><a  href="#" title="澳大利亚北领地">澳大利亚北领地</a></li>
+                        <li><a  href="#" title="肯尼亚旅游局">肯尼亚旅游局</a></li>
+                        <li><a  href="#" title="关岛观光局">关岛观光局</a></li>
+                        <li><a  href="#" title="日本国家旅游局">日本国家旅游局</a></li>
+                        <li><a  href="#" title="洛阳市旅发委">洛阳市旅发委</a></li>
+                        <li><a  href="#" title="瑞士琉森旅游局">瑞士琉森旅游局</a></li>
+                        <li><a  href="#" title="爱尔兰旅游局">爱尔兰旅游局</a></li>
+                    </ul>
+                </div>
+                <div class="fl-bottom">
+                    <h6><a href="#" target="_blank" title="媒体专栏">媒体专栏</a></h6>
+                    <ul class="clearfix">
+                        <li><a href="#" title="蓝猪坊">蓝猪坊</a></li>
+                        <li><a  href="#" title="旅游世界">旅游世界</a></li>
+                        <li><a  href="#" title="《航空画报》杂志">《航空画报》杂志</a></li>
+                        <li><a  href="#" title="姑婆山">姑婆山</a></li>
+                        <li><a  href="#" title="《孤独星球》杂志">《孤独星球》杂志</a></li>
+                        <li><a  href="#" title="栖客">栖客</a></li>
+                        <li><a  href="#" title="中国国家旅游">中国国家旅游</a></li>
+                        <li><a  href="#" title="《旅游画刊》">《旅游画刊》</a></li>
+                    </ul>
+                </div>
+                <div class="fl-bottom">
+                    <h6><a href="#" target="_blank" title="周末专栏">周末专栏</a></h6>
+                    <ul class="clearfix">
+                        <li><a href="#" title="Eatalia">Eatalia</a></li>
+                        <li><a  href="#" title="罗红摄影艺术馆">罗红摄影艺术馆</a></li>
+                        <li><a  href="#" title="墨念女塾生活馆">墨念女塾生活馆</a></li>
+                        <li><a  href="#" title="藏三昧">藏三昧</a></li>
+                        <li><a  href="#" title="太一家料理">太一家料理</a></li>
+                        <li><a  href="#" title="白夜照相馆">白夜照相馆</a></li>
+                        <li><a  href="#" title="土氣">土氣</a></li>
+                        <li><a  href="#" title="福匠工作室">福匠工作室</a></li>
+                    </ul>
+                </div>
+                <div class="fl-bottom">
+                    <h6><a href="#" target="_blank" title="自驾专栏">自驾专栏</a></h6>
+                    <ul class="clearfix">
+                        <li><a href="#" title="车游天下">车游天下</a></li>
+                        <li><a  href="#" title="北京携友同行自驾游">北京携友同行自驾游</a></li>
+                        <li><a  href="#" title="长久乐途车友会">长久乐途车友会</a></li>
+                        <li><a  href="#" title="969自驾俱乐部">969自驾俱乐部</a></li>
+                        <li><a  href="#" title="敖兰嘎鲁旅行工作室">敖兰嘎鲁旅行工作室</a></li>
+                        <li><a  href="#" title="穿越国际自驾俱游乐部">穿越国际自驾俱游乐部</a></li>
+                        <li><a  href="#" title="龙腾天下自驾游俱乐部">龙腾天下自驾游俱乐部</a></li>
+                        <li><a  href="#" title="丁丁猫汽车俱乐部">丁丁猫汽车俱乐部</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="fr">
+                <h6 class="clearfix">
+                    <a href="#" class="l">灵感文昨日阅读量排行</a>
+                    <span>|</span>
+                    <a href="#">月度阅读量排行</a>
+                </h6>
+
+                <ul>
+                    <li class="clearfix">
+                        <div class="cont">
+                            <i class="num num1">1</i>
+                            <a href="#" class="a-per" title="到天下郑姓发源地探访郑氏之源">到天下郑姓发源地探访郑氏之源</a>
+                            <a class="a-after" href="#" title="刘新刚" >刘新刚</a>
+                        </div>
+                        <span class="eye">20.2万</span>
+                    </li>
+                    <li class="clearfix">
+                        <div class="cont">
+                            <i class="num num2">2</i>
+                            <a href="#" class="a-per" title="中国的旧金山，黄金不换的人间净土">中国的旧金山，黄金不换的人间净土</a>
+                            <a class="a-after" href="#" title="向东向北（李昕）" >向东向北</a>
+                        </div>
+                        <span class="eye">18.8万</span>
+                    </li>
+                    <li class="clearfix">
+                        <div class="cont">
+                            <i class="num num3">3</i>
+                            <a href="#" class="a-per" title="海口观澜湖，最是在重逢里初见">海口观澜湖，最是在重逢里初见</a>
+                            <a class="a-after" href="#" title="文龙" >文龙</a>
+                        </div>
+                        <span class="eye">13.9万</span>
+                    </li>
+                    <li class="clearfix">
+                        <div class="cont">
+                            <i class="num num4">4</i>
+                            <a href="#" class="a-per" title="如此安静的西湖夜景千载难逢">如此安静的西湖夜景千载难逢</a>
+                            <a class="a-after" href="#" title="@骑在牛背上" >@骑在牛背上</a>
+                        </div>
+                        <span class="eye">18.7万</span>
+                    </li>
+                    <li class="clearfix">
+                        <div class="cont">
+                            <i class="num num5">5</i>
+                            <a href="#" class="a-per" title="云和篇：莲花坐下求子会有对象">云和篇：莲花坐下求子会有对象</a>
+                            <a class="a-after" href="#" title="子默不语" >子默不语</a>
+                        </div>
+                        <span class="eye">23.5万</span>
+                    </li>
+                    <li class="clearfix">
+                        <div class="cont">
+                            <i class="num num6">6</i>
+                            <a href="#" class="a-per" title="游日喀则看珠峰：足在云端 心在峰顶">游日喀则看珠峰：足在云端 心在峰顶</a>
+                            <a class="a-after" href="#" title="图说生态" >图说生态</a>
+                        </div>
+                        <span class="eye">25.1万</span>
+                    </li>
+                    <li class="clearfix">
+                        <div class="cont">
+                            <i class="num num7">7</i>
+                            <a href="#" class="a-per" title="我眺望远方的珠峰，竟失了语">我眺望远方的珠峰，竟失了语</a>
+                            <a class="a-after" href="#" title="影画丹丹" >影画丹丹</a>
+                        </div>
+                        <span class="eye">19.8万</span>
+                    </li>
+                    <li class="clearfix">
+                        <div class="cont">
+                            <i class="num num8">8</i>
+                            <a href="#" class="a-per" title="萨迦寺，为何能被称为“第二敦煌">萨迦寺，为何能被称为“第二敦煌</a>
+                            <a class="a-after" href="#" title="落榜进士" >落榜进士</a>
+                        </div>
+                        <span class="eye">17.9万</span>
+                    </li>
+                    <li class="clearfix">
+                        <div class="cont">
+                            <i class="num num9">9</i>
+                            <a href="#" class="a-per" title="亚东  神仙居住的地方">亚东  神仙居住的地方</a>
+                            <a class="a-after" href="#" title="邱洪斌" >邱洪斌</a>
+                        </div>
+                        <span class="eye">20.2万</span>
+                    </li>
+                    <li class="clearfix">
+                        <div class="cont">
+                            <i class="num num10">10</i>
+                            <a href="#" class="a-per" title="寻秘后藏，日喀则原来有座敦煌第二">寻秘后藏，日喀则原来有座敦煌第二</a>
+                            <a class="a-after" href="#" title="莎莎爱旅行" >莎莎爱旅行</a>
+                        </div>
+                        <span class="eye">26.4万</span>
+                    </li>
+                    <li class="clearfix">
+                        <div class="cont">
+                            <i class="num num11">11</i>
+                            <a href="#" class="a-per" title="绝美日喀则，一个没有结束的开始">绝美日喀则，一个没有结束的开始</a>
+                            <a class="a-after" href="#" title="刘新刚" >刘新刚</a>
+                        </div>
+                        <span class="eye">30.0万</span>
+                    </li>
+                    <li class="clearfix">
+                        <div class="cont">
+                            <i class="num num12">12</i>
+                            <a href="#" class="a-per" title="到天下郑姓发源地探访郑氏之源">到天下郑姓发源地探访郑氏之源</a>
+                            <a class="a-after" href="#" title="丁丁旅行" >丁丁旅行</a>
+                        </div>
+                        <span class="eye">15.8万</span>
+                    </li>
+                    <li class="clearfix">
+                        <div class="cont">
+                            <i class="num num13">13</i>
+                            <a href="#" class="a-per" title="苗族教科书，朗德非遗博物馆">苗族教科书，朗德非遗博物馆</a>
+                            <a class="a-after" href="#" title="文龙" >文龙</a>
+                        </div>
+                        <span class="eye">20.8万</span>
+                    </li>
+                    <li class="clearfix">
+                        <div class="cont">
+                            <i class="num num14">14</i>
+                            <a href="#" class="a-per" title="择壹山而栖  山里有寒舍">择壹山而栖  山里有寒舍</a>
+                            <a class="a-after" href="#" title="小海波澜XHB" >小海波澜XHB</a>
+                        </div>
+                        <span class="eye">16.9万</span>
+                    </li>
+                    <li class="clearfix">
+                        <div class="cont">
+                            <i class="num num15">15</i>
+                            <a href="#" class="a-per" title="到天下郑姓发源地探访郑氏之源">到天下郑姓发源地探访郑氏之源</a>
+                            <a class="a-after" href="#" title="刘新刚" >刘新刚</a>
+                        </div>
+                        <span class="eye">22.8万</span>
+                    </li>
+                    <li class="clearfix">
+                        <div class="cont">
+                            <i class="num num16">16</i>
+                            <a href="#" class="a-per" title="Zebra奔驰在非洲草原上的时尚大模">Zebra奔驰在非洲草原上的时尚大模</a>
+                            <a class="a-after" href="#" title="安妮" >安妮</a>
+                        </div>
+                        <span class="eye">24.5万</span>
+                    </li>
+                    <li class="clearfix">
+                        <div class="cont">
+                            <i class="num num17">17</i>
+                            <a href="#" class="a-per" title="普兰胜境，神山圣湖">普兰胜境，神山圣湖</a>
+                            <a class="a-after" href="#" title="倚窗寒梅" >倚窗寒梅</a>
+                        </div>
+                        <span class="eye">26.7万</span>
+                    </li>
+                    <li class="clearfix">
+                        <div class="cont">
+                            <i class="num num18">18</i>
+                            <a href="#" class="a-per" title="大叻漫行——别把它当中转站！">大叻漫行——别把它当中转站！</a>
+                            <a class="a-after" href="#" title="闵文果" >闵文果</a>
+                        </div>
+                        <span class="eye">28.8万</span>
+                    </li>
+                    <li class="clearfix">
+                        <div class="cont">
+                            <i class="num num19">19</i>
+                            <a href="#" class="a-per" title="郎木寺，感悟信仰的力量">郎木寺，感悟信仰的力量</a>
+                            <a class="a-after" href="#" title="襄樊咩咩羊" >襄樊咩咩羊</a>
+                        </div>
+                        <span class="eye">23.2万</span>
+                    </li>
+                    <li class="clearfix">
+                        <div class="cont">
+                            <i class="num num20">20</i>
+                            <a href="#" class="a-per" title="梅州滋味    五仁火腿">梅州滋味    五仁火腿</a>
+                            <a class="a-after" href="#" title="UFO99王喜庆" >UFO99王喜庆</a>
+                        </div>
+                        <span class="eye">20.8万</span>
+                    </li>
+                    <li class="clearfix">
+                        <div class="cont">
+                            <i class="num num21">21</i>
+                            <a href="#" class="a-per" title="雪域刀王一把刀寄托所有藏族人的信仰">雪域刀王一把刀，寄托所有藏族人的信仰</a>
+                            <a class="a-after" href="#" title="丁丁旅行" >闵文果</a>
+                        </div>
+                        <span class="eye">28.5万</span>
+                    </li>
+                    <li class="clearfix">
+                        <div class="cont">
+                            <i class="num num22">22</i>
+                            <a href="#" class="a-per" title="天堂的羊湖，别来无恙">天堂的羊湖，别来无恙</a>
+                            <a class="a-after" href="#" title="丁丁旅行" >丁丁旅行</a>
+                        </div>
+                        <span class="eye">20.9万</span>
+                    </li>
+                    <li class="clearfix">
+                        <div class="cont">
+                            <i class="num num23">23</i>
+                            <a href="#" class="a-per" title="神的自留地，我无可救药的情怀">神的自留地，我无可救药的情怀</a>
+                            <a class="a-after" href="#" title="丁丁旅行" >丁丁旅行</a>
+                        </div>
+                        <span class="eye">28.8万</span>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!--pyf-->
+<div class="inspire-btn">
+    <ul>
+        <li class="btn btn1">
+            <div class="inner1">
+                <span class="inner-img"><img src="images/bt1.jpg" alt=""/></span>
+                <a href="#" class="txt join">加入我们</a>
+                <a href="#" class="txt login">登录</a>
+            </div>
+        </li>
+        <li class="btn btn2">
+            <div class="inner2">
+                <span><img src="images/bt2.jpg" alt="div" style="height: 530px"/></span>
+            </div>
+        </li>
+        <li class="btn btn3">
+            <div class="inner3">
+                <span><img src="images/bt3.jpg" alt="div" style="height: 530px"/></span>
+            </div>
+        </li>
+        <li class="btn btn4">
+            <div class="inner4">
+                <span><img src="images/bt4.jpg" alt="div" style="height: 530px"/></span>
+            </div>
+        </li>
+        <li class="btn btn5">
+            <div class="inner5">
+                <span><img src="images/bt5.jpg" alt="div"/></span>
+
+                <div class="inner5-bot">
+                    <p class="error-msg" id="sh-p"></p>
+                    <input id="inp1" type="text" placeholder="您的手机号" /><br/>
+                    <input id="inp2" type="text" placeholder="您的昵称"/><br/>
+                    <input id="inp3" type="text" placeholder="您的密码"/><br/>
+                    <input class="inp-mesl" type="text" placeholder="短信验证码"/>
+                    <button class="inp-mesr">获取验证码</button>
+                    <br/>
+                    <input class="inp-join" type="submit" value="加入我们"/>
+                </div>
+
+
+            </div>
+
+        </li>
+    </ul>
+
+    <div class="arrow1-a1">
+        <a  class="current-a"></a>
+        <a ></a>
+        <a ></a>
+        <a ></a>
+        <a ></a>
+    </div>
+
+</div>
+
+<!--底部-->
+<div class="f-top">
+    <div class="footer-top footer">
+        <div class="footer-top-l">
+            <dl>
+                <dt>关于我们</dt>
+                <dd>乐途介绍</dd>
+                <dd>招贤纳士</dd>
+                <dd>网站荣誉</dd>
+                <dd>联系我们</dd>
+            </dl>
+            <dl>
+                <dt>商家服务</dt>
+                <dd>乐途营销</dd>
+                <dd>商家登录</dd>
+            </dl>
+            <dl>
+                <dt>新手上路</dt>
+                <dd>预订帮助</dd>
+                <dd>服务条款</dd>
+                <dd>版权声明</dd>
+            </dl>
+        </div>
+        <div class="footer-top-r">
+            <!--<span></span>-->
+            <!--<ul>-->
+                <!--<li>乐途</li>-->
+                <!--<li>乐途</li>-->
+                <!--<li>乐途</li>-->
+                <!--<li>乐途</li>-->
+                <!--<li>乐途</li>-->
+                <!--<li>乐途</li>-->
+            <!--</ul>-->
+            <div class="xwl-foot-divimgteam">
+            <div class="img1"></div>
+            <div class="img2"></div>
+            </div>
+            <div class="xwl-foot-divimg1"><img class="xwl-foot-img1" src="xwl.img/xwl6.png" alt=""/></div>
+            <div class="xwl-foot-divimg2"><img class="xwl-foot-img2" src="xwl.img/xwl6.png"  alt=""/></div>
+        </div>
+    </div>
+</div>
+<div class="line"></div>
+<div class="f-bot">
+    <div class="footer-bot footer">
+        <p class="img-l"><img src="images/logo_ft.png" alt=""/></p>
+
+        <p class="txt">京ICP备12008860号-1 广电节目制作许可证：1313号京公网安备 11010502001653号<br>
+            Copyright © 2005 - 2016 Lotour.com All Rights Reserved. 乐途旅游网 版权所有</p>
+
+        <p class="img-r"><a href="#"><img src="images/plc.png" alt=""/></a></p>
+    </div>
+</div>
+
+<!--<div class="f-top">-->
+    <!--<div class="footer-top footer">-->
+        <!--<div class="footer-top-l">-->
+            <!--<dl>-->
+                <!--<dt>关于我们</dt>-->
+                <!--<dd>乐途介绍</dd>-->
+                <!--<dd>招贤纳士</dd>-->
+                <!--<dd>网站荣誉</dd>-->
+                <!--<dd>联系我们</dd>-->
+            <!--</dl>-->
+            <!--<dl>-->
+                <!--<dt>商家服务</dt>-->
+                <!--<dd>乐途营销</dd>-->
+                <!--<dd>商家登录</dd>-->
+            <!--</dl>-->
+            <!--<dl>-->
+                <!--<dt>新手上路</dt>-->
+                <!--<dd>预订帮助</dd>-->
+                <!--<dd>服务条款</dd>-->
+                <!--<dd>版权声明</dd>-->
+            <!--</dl>-->
+        <!--</div>-->
+        <!--<div class="footer-top-r">-->
+            <!--<div class="xwl-foot-divimgteam">-->
+                <!--<div class="img1"></div>-->
+                <!--<div class="img2"></div>-->
+            <!--</div>-->
+            <!--<div class="xwl-foot-divimg1"><img class="xwl-foot-img1" src="xwl.img/xwl6.png" alt=""/></div>-->
+            <!--<div class="xwl-foot-divimg2"><img class="xwl-foot-img2" src="xwl.img/xwl6.png"  alt=""/></div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<!--<div class="line"></div>-->
+<!--<div class="f-bot">-->
+    <!--<div class="footer-bot footer">-->
+        <!--<p class="img-l"><img src="xwl.img/xwl4.png" alt=""/></p>-->
+
+        <!--<p class="txt">京ICP备12008860号-1 广电节目制作许可证：1313号京公网安备 11010502001653号<br>-->
+            <!--Copyright ? 2005 - 2016 Lotour.com All Rights Reserved. 乐途旅游网 版权所有</p>-->
+
+        <!--<p class="img-r"><a href="#"><img src="xwl.img/xwl5.png" alt=""/></a></p>-->
+    <!--</div>-->
+<!--</div>-->
+<img id="sword" src="images/tianshi.gif"/>
+</body>
+</html>

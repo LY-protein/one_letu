@@ -1,0 +1,487 @@
+body, ol, ul, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd, form, fieldset, legend, input, textarea, select {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #2b2b2b;
+    font: 16px/20px ΢���ź�, "Microsoft YaHei";
+}
+
+img, input, button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "microsoft yahei";
+}
+
+select, input {
+    vertical-align: middle;
+}
+
+select, input, textarea {
+    resize: none;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+body {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53";
+    background: #fff
+}
+
+.clearfix:before, .clearfix:after {
+    content: '';
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+a:hover {
+    color: #ec6909;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%
+}
+
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+
+.col-o {
+    color: #ec6909;
+}
+
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.al {
+    text-align: left
+}
+
+.ac {
+    text-align: center
+}
+
+.ar {
+    text-align: right
+}
+
+.hide {
+    display: none
+}
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+/*��ʼ*//*��ʼ*//*��ʼ*//*��ʼ*//*��ʼ*/
+/*���ض���*/
+.Totop {
+    position: fixed;
+    bottom: 90px;
+    right: 0px;
+    cursor: pointer;
+    display: none;
+}
+.nav-top {
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+
+}
+
+.nav-top-logo h1 {
+    width: 182px;
+    background-color: #ff860d;
+    float: left;
+}
+
+.nav-top-nav {
+    width: 500px;
+    height: 60px;
+}
+.nav-top-nav .put {
+    padding: 0 6px;
+    height: 20px;
+    position: relative;
+    z-index: 1;
+}
+.nav-top-nav .put .smallbox {
+    display: none;
+    cursor: pointer;
+    padding-top: 23px;
+    width: 100%;
+    margin-top: -45px;
+    background: rgba(236,105,9,0.7);
+    border-radius: 7px;
+}
+.nav-top-nav .put .smallbox a {
+    margin-top: 5px;
+    display: block;
+    color: #ffffff;
+    width: 100%;
+    line-height: 28px;
+    font: 14px/28px "simsun";
+}
+.smallbox a:hover {
+    background:#ec6909 ;
+    border-bottom: 1px solid #eda559;
+    border-radius: 7px;
+}
+.nav-top-nav .put .whi:hover {
+    color: #ffffff;
+}
+.nav-top-nav li {
+    padding: 0 15px;
+    float: left;
+    font-size: 16px;
+    font-family: "microsoft yahei";
+}
+
+.nav-top-nav ul {
+    position: relative;
+}
+
+.nav-top-nav .put .whi:hover {
+    color: #ffffff;
+}
+.nav-top-nav .put .whi span {
+    width: 25px;
+    height: 15px;
+    font-family: "microsoft yahei";
+}
+
+
+.nav-top-r {
+    width: 600px;
+}
+
+.nav-top-search {
+    width: 210px;
+    height: 37px;
+    position: relative;
+}
+
+.nav-top-search input {
+    margin-top: 15px;
+    width: 199px;
+    height: 35px;
+    color: #6e6e6e;
+    font: 12px/37px "sim sun";
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    padding-left: 9px;
+    float: left;
+
+}
+/*.xbox {*/
+    /*font: 12px/22px ����;*/
+    /*color: #333;*/
+    /*border-bottom: 1px solid #d0d0d0;*/
+    /*padding-left: 20px;*/
+    /*margin-bottom: 5px;*/
+/*}*/
+.nav-top-search span {
+    position: absolute;
+    top: 23px;
+    right: 8px;
+    width: 18px;
+    height: 18px;
+    background: url("images/sprite_24.png") no-repeat -72px -110px;
+    float: right;
+    cursor: pointer;
+}
+
+.nav-top-r {
+    width: 401px;
+    height: 60px;
+}
+
+.nav-top-sign {
+    width: 110px;
+    height: 20px;
+    margin-top: 22px;
+
+}
+
+.nav-top-sign .weixin {
+    float: left;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url("images/weichat.png") no-repeat center;
+    margin-left: 15px;
+}
+
+.nav-top-sign .weibo {
+    float: left;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url("images/sprite_24.png") no-repeat 0 0;
+    margin-left: 15px;
+}
+
+.nav-top-sign .qq {
+    float: left;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url("images/sprite_24.png") no-repeat -33px 0;
+    margin-left: 15px;
+}
+
+.nav-top-r .login a {
+    color: #2b2b2b;
+    font: 12px/60px "simsun";
+    padding-left: 15px;
+}
+
+.nav-top-r .login a:hover {
+    color: #ec6909;
+}
+
+/*��ͼ*/
+.map {
+    height: 650px;
+    width: 100%;
+    background-color: #E1E1E1;
+}
+
+/*�ײ�*/
+.footer {
+    width: 100%;
+    height: 202px;
+    background-color: #222430;
+}
+
+.footer-center {
+    padding: 35px 0;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-list dl {
+    float: left;
+    width: 137px;
+}
+
+.footer-list dl, .footer-list .friend .fd {
+    color: #999;
+    font: 14px/25px "microsoft yahei";
+}
+
+.footer-list dd a, .footer-list p a {
+    color: #666;
+    font: 14px/25px "microsoft yahei";
+}
+
+.footer-list dd a:hover, .footer-list p a:hover, .footer-list .friend .dd:hover {
+    color: #ec6909;
+}
+
+.footer-list p a {
+    margin-right: 15px;
+}
+
+/*�ұ�*/
+.footer-r .fd {
+    color: #999;
+    font: 14px/25px "microsoft yahei";
+}
+
+.footer-r .samllLogo {
+    margin-top: 6px;
+}
+
+.footer-r .wb {
+    float: left;
+    display: block;
+    width: 26px;
+    height: 26px;
+    background: url("images/sprite_24.png") no-repeat 0 -29px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+}
+
+.footer-r .kj {
+    float: left;
+    display: block;
+    width: 26px;
+    height: 26px;
+    background: url("images/sprite_24.png") no-repeat -32px -29px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+}
+
+.footer-r .rr {
+    float: left;
+    display: block;
+    width: 26px;
+    height: 26px;
+    background: url("images/sprite_24.png") no-repeat -64px -29px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+}
+
+.footer-r .txwb {
+    float: left;
+    display: block;
+    width: 26px;
+    height: 26px;
+    background: url("images/sprite_24.png") no-repeat 0 -62px;
+    margin-right: 6px;
+}
+
+.footer-r .ewm {
+    position: relative;
+    float: left;
+    display: block;
+    width: 26px;
+    height: 26px;
+    background: url("images/sprite_24.png") no-repeat -32px -62px;
+}
+.letuewm {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0px;
+}
+.footer-r .footer-weixin {
+    margin-left: 60px;
+}
+
+.footer-r .smallweixin {
+    margin-top: 6px;
+    width: 95px;
+    height: 95px;
+    background: url("images/wechat.png");
+    position: relative;
+}.footer-r .smallweixin a {
+     display: block;
+     width: 95px;
+     height: 95px;
+ }
+.footer-r .smallweixin .bigweixin{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: -158px;
+}
+/*�ײ����*/
+.botad {
+    width: 100%;
+    height: 200px;
+    background: url("images/2016032809550516839545.jpg");
+    position: relative;
+}
+.botad a {
+    display: block;
+    width: 100%;
+    height: 200px;
+}
+.botad .tuiguang {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background-color: #6e6e6e;
+    color: #ffffff;
+    font: 14px/30px "sim sun";
+    text-align: center;
+    cursor: pointer;
+}
+
+/*botton star*/
+.bottom {
+    width: 100%;
+    height: 85px;
+    background-color: #222430;
+    border-top: 1px solid #333;
+}
+
+.bottom-center {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.bottom-center .l-logo {
+    margin-top: 30px;
+    float: left;
+    width: 134px;
+    height: 32px;
+    background: url("images/logo_ft.png") no-repeat;
+    margin-right: 60px;
+}
+.bottom-center .l-copy {
+    float: left;
+    margin-top: 25px;
+
+}
+.bottom-center .l-copy .text-t {
+    font-size: 13px;
+    color: #666666;
+    font-family: "SimSun";
+}
+.bottom-center .l-copy .text-b {
+    font-size: 12px;
+    color: #666666;
+    font-family: "SimSun";
+}
+.bottom-center .sico {
+    margin-top: 25px;
+    float: left;
+    width: 26px;
+    height: 31px;
+    background: url("images/sprite_24.png")no-repeat -1px -96px;
+    margin-left: 15px;
+
+}
+.bottom-center .l-plc {
+    width: 146px;
+    height: 59px;
+    line-height: 85px;
+}

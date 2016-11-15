@@ -1,0 +1,390 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0
+}
+
+body, button, input, select, textarea {
+    font-size: 12px;
+    font-family: \5FAE\8F6F\96C5\9ED1, "Microsoft YaHei";
+}
+div {
+    display: block;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%
+}
+
+html, body {
+    height: 100%
+}
+
+b, strong {
+    font-weight: bold
+}
+
+input {
+    vertical-align: middle
+}
+
+img {
+    color: transparent;
+    font-size: 0;
+    vertical-align: middle;
+    -ms-interpolation-mode: bicubic;
+    border: 0
+}
+
+address, cite, dfn, em, var {
+    font-style: normal
+}
+
+code, kbd, pre, samp {
+    font-family: courier new, courier, monospace
+}
+
+small {
+    font-size: 12px
+}
+
+ul, ol {
+    list-style: none
+}
+
+sup {
+    vertical-align: text-top
+}
+
+sub {
+    vertical-align: text-bottom
+}
+
+fieldset, img {
+    border: 0
+}
+
+button, input, select, textarea {
+    font-size: 100%
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+a {
+    text-decoration: none;
+
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.clearfix:before, .clearfix:after {
+    content: '.';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    font-size: 0;
+    line-height: 0;
+    width: 0;
+    height: 0
+}
+
+.clearfix:after {
+    clear: both
+}
+
+.clearfix {
+    zoom: 1
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.none {
+    display: none
+}
+
+
+
+.head-figure {
+    background: #f6f6f6;
+    height: 560px;
+    margin-top: 0px;
+}
+
+.head-figure .f-info {
+    width: 1200px;
+    margin: 0px auto;
+}
+
+.figure-left {
+    width: 180px;
+    border: 1px solid #d3d3d3;
+    background: #eaeaea;
+    height: 498px;
+}
+
+.figure-left .menu {
+    border-bottom: 1px solid #d3d3d3;
+    height: 165px;
+    font-size: 18px;
+    color: #333;
+    font-family: "Microsoft YaHei";
+    position: relative;
+    cursor: pointer;
+}
+
+.figure-left .menu:hover {
+    background: #f9f9f9;
+    width: 101%; /*box-shadow:0px 1px 2px rgba(0, 0, 0, 0.1);*/
+}
+
+.figure-left .menu:hover .city-more {
+    display: block; /*box-shadow:1px 1px 2px rgba(0, 0, 0, 0.1);*/
+}
+
+.figure-left .menu:hover .i-img1 {
+    display: none;
+}
+
+.figure-left .menu:hover .i-img1-hov {
+    display: inline-block;
+}
+
+.figure-left .menu:hover .i-img2 {
+    display: none;
+}
+
+.figure-left .menu:hover .i-img2-hov {
+    display: inline-block;
+}
+
+.figure-left .menu:hover .i-img3 {
+    display: none;
+}
+
+.figure-left .menu:hover .i-img3-hov {
+    display: inline-block;
+}
+
+.figure-left .menu em {
+    display: inline-block;
+    margin-top: 65px;
+}
+
+.figure-left .menu i {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    position: relative;
+    top: 10px;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.figure-left .menu .i-img1 {
+    background: url(../images/ziji-newico.png) 0px -40px no-repeat;
+}
+
+.figure-left .menu .i-img2 {
+    background: url(../images/ziji-newico.png) -42px -40px no-repeat;
+}
+
+.figure-left .menu .i-img3 {
+    background: url(../images/ziji-newico.png) -86px -40px no-repeat;
+}
+
+.figure-left .menu .i-img1-hov {
+    background: url(../images/ziji-newico.png) 0px -82px no-repeat;
+    display: none;
+}
+
+.figure-left .menu .i-img2-hov {
+    background: url(../images/ziji-newico.png) -42px -82px no-repeat;
+    display: none;
+}
+
+.figure-left .menu .i-img3-hov {
+    background: url(../images/ziji-newico.png) -86px -82px no-repeat;
+    display: none;
+}
+
+.figure-left .menu-beijing em {
+    margin-top: 52px;
+}
+
+.figure-left .menu-no {
+    border-bottom: none;
+    height: 166px;
+}
+
+.figure-right {
+    width: 1018px;
+}
+.figure-right-lbz1 ul{
+    margin-left: 70px;
+    margin-top: 10px;
+}
+.figure-right-lbz1 li{
+    float: left;
+    position: relative;
+    overflow: hidden;
+    width: 298px;
+    height: 235px;
+    border: 1px solid #ccc;
+    padding: 2px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+
+}
+
+.figure-right-lbz1 li img{
+    width: 298px;
+}
+.figure-right-lbz1 li a{
+}
+.figure-right-lbz1 li .mask{
+    position: absolute;
+    color: #fff;
+    left: -300px;
+    top: -300px;
+    width: 100%;
+    height:100%;
+    background: rgba(255, 255, 255, 0.6);
+    font-size: 17px;
+}
+.figure-right-lbz1 li .mask .mask-item-info{
+    position: relative;
+    top: 60%;
+    background-color: #ff5d8c;
+    width: 100%;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+
+}
+
+
+.imgborder{
+
+    width: 1200px;
+    height: 250px;
+    /*border: 1px solid #ccc;*/
+    margin: 10px auto;
+    /*overflow: hidden;*/
+}
+
+.imgborder ul{
+    /*width: 10000px;*/
+}
+.imgborder li{
+    float: left;
+    /*height: 250px;*/
+    width: 290px;
+    margin-right: 10px;
+    /*border: 1px solid #000;*/
+
+    /*border-top-right-radius: 10px;*/
+    /*border-bottom-right-radius: 10px;*/
+    /*border-top-left-radius: 10px;*/
+    /*border-bottom-left-radius: 10px;*/
+    overflow: hidden;
+    border-radius: 5px;
+}
+#imgborli1{
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-top-left-radius: 100px;
+}
+#imgborli2{
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-top-left-radius: 100px;
+}
+.imgborder li img{
+    width: 290px;
+    margin: 0 auto;
+
+}
+/*周边*/
+.city-more {
+    background: #f9f9f9;
+    height: 499px;
+    width: 360px;
+    overflow: hidden;
+    padding: 0px 0px 0px 0px;
+    border: 1px solid #d3d3d3;
+    border-left: none;
+    position: absolute;
+    left: 181px;
+    top: -2px;
+    z-index: 5;
+    display: none;
+    cursor: auto;
+}
+
+.city-more2 {
+    top: -168px;
+}
+
+.city-more3 {
+    top: -334px;
+}
+
+.city-more .list2 {
+    color: #666;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    width: 310px;
+    margin: 45px 0px 15px 15px;
+}
+
+.city-more .list2 li {
+    margin-bottom: 10px;
+    width: 310px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.city-more .list2 li .s-title {
+    display: inline-block;
+    width: 85px;
+    color: #fd8003;
+    text-align: right;
+    margin-right: 16px;
+}
+
+.city-more .list2 li .s-title a {
+    color: #FD8003;
+}
+
+.city-more .list2 li a {
+    color: #666;
+    white-space: nowrap;
+}
+
+.city-more .list2 li a:hover {
+    color: #FD8003;
+}
+
+.city-more .list2 li .shu {
+    width: 1px;
+    height: 13px;
+    display: inline-block;
+    background: #ddd;
+    position: relative;
+    top: 2px;
+    margin: 0px 2px 0px 5px;
+}
+
+
+
+
+

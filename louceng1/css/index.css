@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+ul li {
+    list-style: none;
+}
+input {
+    outline-style: none;
+    border: 0 none;
+}
+.inspire-btn {
+    overflow: hidden;
+    position: relative;
+}
+.inspire-btn ul{
+    position: relative;
+    /*height: 680px;*/
+}
+.btn {
+    height: 680px;
+    text-align: center;
+}
+.btn1 {
+    background: rgb(110, 122, 142);
+}
+.btn2 {
+    background: rgb(110, 142, 127);
+}
+.btn3 {
+    background: rgb(97, 77, 144);
+}
+.btn4 {
+    background: rgb(74, 155, 214);
+}
+.btn5 {
+    background:  rgb(110, 122, 142);
+}
+.inner1 {
+    padding-top: 115px;
+}
+.inner1-img {
+    /*margin-top: 115px;*/
+}
+.txt {
+    width: 302px;
+    height: 47px;
+    margin: 0 auto 10px;
+    display: block;
+    font: 18px/47px 微软雅黑;
+    text-align: center;
+    border-radius: 5px;
+}
+.join {
+    background: #456293;
+    color: #fff;
+}
+.login {
+    background: #c8ccd4;
+    color: #454545;
+}
+
+/*第二张图片*/
+.inner2 {
+    padding: 50px;
+}
+/*第三张图片*/
+.inner3 {
+    padding: 50px;
+}
+/*第四张图片*/
+.inner4 {
+    padding: 50px;
+}
+/*第五张图片*/
+.inner5 {
+    padding: 50px;
+}
+.inner5-bot {
+    width: 270px;
+    margin: 0 auto;
+}
+.inner5-bot input {
+    width: 270px;
+    height: 30px;
+    background-color: #c8ccd4;
+    color: #999;
+    border-radius: 5px;
+    font: 14px/20px "simsun";
+    padding: 7px 15px;
+    border: 1px solid #c8ccd4;
+    margin-bottom: 10px;
+}
+.inner5-bot .inp-mesl {
+    width: 117px;
+    float: left;
+}
+.inner5-bot .inp-mesr {
+    width: 120px;
+    height: 46px;
+    display: block;
+    float: right;
+    background-color: #a2aab7;
+    color: #474b51;
+    border: 1px solid #a2aab7;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.inner5-bot .inp-join {
+    width: 300px;
+    height: 70px;
+    border: 1px solid #456293;
+    font: 26px/60px "simsun";
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+    background-color: #456293;
+}
+.inner5-bot .inp-join:hover {
+    background-color: #ffa027;
+}
+.wrong {
+    color: #ff0941;
+    /*border: 1px solid #ff081b;*/
+}
+.right {
+    border: 1px solid #16ff18;
+}
+.error-msg {
+    width: 270px;
+    /*height: 30px;*/
+    margin-bottom: 10px;
+    /*padding: 7px 15px;*/
+}
+
+.inspire-btn .arrow1-a {
+    position: fixed;
+    top: 325px;
+    right: 10%;
+    margin-top: 20px;
+}
+
+.inspire-btn .arrow1-a .current-a {
+    width: 8px;
+    height: 8px;
+    background: none;
+    border: 2px solid #eb6100;
+    border-radius: 100%;
+}
+.inspire-btn .arrow1-a a {
+    display: block;
+    width: 8px;
+    height: 8px;
+    margin: 10px auto;
+    border-radius: 100%;
+    background-color: #fff;
+}
+.f-top,.f-bot {
+    background: #222430;
+}
+.footer {
+    width: 1200px;
+    margin: 0 auto;
+}
+.footer-top {
+    height: 197px;
+    padding: 35px 0;
+}
+.line {
+    border: 1px solid #333;
+}
+.footer-top-l {
+    float: left;
+}
+.footer-top-l dl {
+    float: left;
+    margin-right: 80px;
+}
+.footer-top-l dt {
+     font: 14px/25px "simsun";
+     color: #999;
+}
+.footer-top-l dd {
+    font: 14px/25px "simsun";
+    color: #666;
+}
+.footer-top-r {
+    float: right;
+    position: relative;
+    margin-top: 50px;
+}
+.footer-top-r ul {
+    /*margin-top: 30px;*/
+    position: relative;
+}
+.footer-top-r ul li {
+    float: left;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    border-radius: 100%;
+    font: 500 12px/32px "microsoft yahei";
+    cursor: pointer;
+    color: #fff;
+}
+.footer-top-r span {
+    width: 32px;
+    height: 32px;
+    background: url("../images/jd.jpg") no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.footer-bot {
+    height: 85px;
+    position: relative;
+}
+.footer-bot .img-l {
+    float: left;
+    margin: 30px 50px 0 0;
+    cursor: pointer;
+}
+.footer-bot .txt {
+    width: 450px;
+    color: #666;
+    font: 12px/20px "simsun";
+    margin: 25px 15px 0 0;
+    float: left;
+}
+
+.footer-bot .img-r {
+    float: right;
+    width: 146px;
+    height: 59px;
+    position: absolute;
+    right: 0px;
+    top: 13px;
+}

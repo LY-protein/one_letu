@@ -1,0 +1,657 @@
+    @charset "utf-8";
+
+    /*维纳斯图片*/
+    .index-c-list {
+        width:1200px;
+        margin:50px auto 0px;
+    }
+    .index-c-list li{
+        float:left;
+        width:595px;
+        margin-right:5px;
+        position:relative;
+        margin-bottom:55px;
+    }
+    .index-c-list li .img{
+        width:595px;
+        height:295px;
+        overflow:hidden;
+        position:relative;
+        display:block;
+    }
+    .index-c-list li img {
+        width:595px;
+        height:295px;
+        border-radius:5px;
+    }
+    .index-c-list li a em{
+        display:block;
+        width:595px;
+        height:295px;
+        position:absolute;
+        top:0;
+        left:0;
+        font:21px/29px 微软雅黑;
+        text-align:center;
+        color:#FFF;
+        overflow:hidden;
+        border-radius:5px;
+        z-index: 2;
+    }
+
+
+    .index-c-list li a em span.t2 {
+        padding-top:105px;
+        display:block
+    }
+    .index-c-list li .city {
+        position:absolute;
+        left:0;
+        bottom:70px;
+        display:none;
+        z-index: 3
+    }
+    .index-c-list li:hover .city{
+        display:block
+    }
+    .index-c-list li .city a{
+        float:left;
+        font:12px/17px 微软雅黑;
+        color:#eee;
+        border:1px solid #eee;
+        padding:0 8px;
+        margin-left:14px;
+        border-radius:3px;
+        opacity:0.8;
+        margin-bottom: 5px
+    }
+    .index-c-list li .city a:hover {
+        background: #ff860d;
+        color: #fff;
+        border: 1px solid #ff860d;
+    }
+
+    .index-c-list li h5{
+        height:40px;
+        overflow:hidden;
+        padding:0 10px
+    }
+    .index-c-list li h5 a{
+        color:#333;
+        font:18px/40px "微软雅黑";
+        vertical-align:middle;
+        margin-top:3px
+    }
+    .index-c-list li h5 a:hover{
+        color:#ff860d
+    }
+    .index-c-list li .tool {
+        text-align:left;
+        padding:0 0 5px 10px
+    }
+    .index-c-list li .tool a{
+        background:url(../images/disbg.png) no-repeat 0 -99px;
+        display:inline-block;
+        padding-left:16px;
+        line-height:20px;
+        color:#b1b1b1;
+        margin-right:20px
+    }
+    .index-c-list li .tool a:hover{
+        color:#ff860d
+    }
+
+    .index-c-list li .tool i{
+        background:url(../images/disbg.png) no-repeat 0 -157px;
+        padding-left:18px;
+        display:inline-block;
+        line-height:20px;
+        color:#b1b1b1;
+        font-style:normal;
+        margin-right:20px;
+        font-family:arial;
+        font-size:12px;
+
+    }
+
+    .index-b-list li .teacher {
+        width:50px;
+        height:26px;
+        background:rgba(0,0,0,0.3);
+        width:50px;
+        height:26px;
+        font:14px/26px 微软雅黑;
+        position:absolute;
+        right:0;top:20px;
+        text-align:center;
+        color:#fff;
+        border-top-left-radius:3px;
+        border-bottom-left-radius:3px;
+    }
+    .index-c-list li .teacher {
+        width:50px;
+        height:26px;
+        background:rgba(0,0,0,0.3);
+        width:50px;
+        height:26px;
+        font:14px/26px 微软雅黑;
+        position:absolute;
+        right:0;
+        top:20px;
+        text-align:center;
+        color:#fff;
+        border-top-left-radius:3px;
+        border-bottom-left-radius:3px;
+    }
+
+/*今日灵感导师*/
+    .index-teacher-top {
+        margin-bottom:40px
+    }
+    .index-teacher-top h5 {
+        text-align:center;
+        font:24px/70px 微软雅黑;
+        color:#676b6e;
+    }
+    .index-teacher-top h5:hover{
+        color: #a9b1b0;
+    }
+    .index-teacher-top p {
+        text-align:center;
+        font:16px/22px 微软雅黑;
+        color:#676b6e;
+        margin-bottom:35px;
+    }
+
+    .index-teacher-bot {
+        width:600px;
+        height:auto;
+        margin:0 auto 65px
+    }
+    .index-teacher-bot-bg{
+        background: #363557;
+    }
+    .index-teacher-bot .index-teacher-bot-bg {
+        width:100%;
+        height:auto;
+        background:#363557;
+        overflow:hidden
+    }
+    .index-teacher-bot .index-teacher-bot-bg .index-teacher-bot-cen {
+        width:465px;
+        height:auto;
+        margin:0 auto;
+        padding-top:120px;
+        margin-bottom:20px;
+        overflow: hidden;
+    }
+    .index-teacher-bot .index-teacher-bot-bg li {
+        float:left
+    }
+    .index-teacher-bot .index-teacher-bot-bg .weibo,.index-teacher-bot .index-teacher-bot-bg .weixin {
+        width:123px;
+        height:98px;
+        margin-top:50px;
+    }
+    .index-teacher-bot .index-teacher-bot-bg .weibo div,.index-teacher-bot .index-teacher-bot-bg .weixin div {
+        float:left;
+        width: 98px;
+        height: 98px;
+        border-radius:100%;
+        -moz-border-radius:100%;
+        -webkit-border-radius:100%;
+        background:#fff;
+        opacity:.2
+    }
+    .index-teacher-bot .index-teacher-bot-bg .weibo p,.index-teacher-bot .index-teacher-bot-bg .weixin p{
+        height:auto;
+        margin:27px 0;
+        font:14px/20px "微软雅黑";
+        text-align: center;
+        color: #292846;
+    }
+    .index-teacher-bot .index-teacher-bot-bg .weibo p em,.index-teacher-bot .index-teacher-bot-bg .weixin p em{
+        display:inline-block;
+        width:80px;
+        max-height:26px;
+        font:12px/13px "微软雅黑";
+        text-align:center;
+        margin-top:2px;
+        overflow:hidden;
+
+    }
+    .index-teacher-bot .index-teacher-bot-bg ul i{
+        float:left;
+        width:25px;
+        height:1px;
+        margin-top:49px;
+        border-top: 1px solid #6e6e6e;
+    }
+    .index-teacher-bot .index-teacher-bot-bg .touxiang{
+        width:216px;
+        height:216px;
+        border-radius:100%;
+        -moz-border-radius:100%;
+        -webkit-border-radius:100%;
+        background:#fff;
+        overflow:hidden
+    }
+    .index-teacher-bot .index-teacher-bot-bg .touxiang img{
+        width: 200px;
+        height: 200px;
+        display: inline;
+        margin:5px;
+        border:3px solid #fff;
+        border-radius: 100px;
+    }
+    .index-teacher-bot .index-teacher-bot-bg .touxiang img:hover{
+        opacity: 0.7;
+    }
+
+    .index-teacher-bot .index-teacher-bot-bg h2{
+        display:none;
+    }
+    .index-teacher-bot .index-teacher-bot-bg .intr {
+        width: 100%;
+        margin-top:0;
+        overflow:hidden;
+    }
+    .index-teacher-bot .index-teacher-bot-bg .intr h1{
+        clear:both;
+        color:#fff;
+        font:28px/30px "微软雅黑";
+        text-align:center;
+        margin-bottom:7px;
+    }
+    .index-teacher-bot .index-teacher-bot-bg .intr h1 a{
+        color:#fff;
+        font:28px/30px "微软雅黑";
+    }
+    .index-teacher-bot .index-teacher-bot-bg .intr p{
+        width:430px;
+        margin:0 auto;
+        color:#fff;
+        font:14px/18px "微软雅黑";
+        text-align:center;
+        overflow:hidden
+    }
+    .index-teacher-bot .index-teacher-bot-bg .intr p a{
+        color:#fff;
+        font:14px/18px "微软雅黑";
+    }
+    .index-teacher-bot .index-teacher-bot-bg .intr .num{
+        margin-top:60px;
+        font:20px/20px "微软雅黑";
+    }
+    .index-teacher-bot .index-teacher-bot-bg .lg-num {
+        font: 21px/30px "微软雅黑";
+        color:#fff;
+        text-align:center;
+        margin-bottom:15px;
+        margin-top:50px;
+    }
+    .index-teacher-bot .index-teacher-bot-bg .lg-num a{
+        font: 21px/30px "微软雅黑";
+        color:#fff;
+    }
+
+
+    /*旅行家推荐*/
+    .index-tourist {
+        width: 1200px;
+        margin: 0 auto;
+        padding: 50px 0 75px;
+    }
+    .index-tourist section {
+        text-align: center;
+        margin-bottom: 70px;
+    }
+    .index-tourist section i {
+        font: italic 18px/50px arial;
+        color: #333;
+    }
+    .index-tourist section h5 {
+        font: italic 36px/50px "微软雅黑";
+        color: #333;
+    }
+    .index-tourist section p {
+        display: none;
+    }
+    .index-tourist .fl {
+        float: left;
+        width: 720px;
+    }
+    .index-tourist .fl .fl-bottom h6 {
+        font: 22px/30px "微软雅黑";
+        color: #333;
+        margin-bottom: 5px;
+    }
+    /*.index-tourist .fl .fl-bottom h6 .join {*/
+        /*display: inline-block;*/
+        /*width: 77px;*/
+        /*height: 14px;*/
+        /*margin: 20px 0 0 15px;*/
+        /*background: url(http://img1.lotour.com/index/join.png) no-repeat 0 0;*/
+    /*}*/
+    .index-tourist .fl .fl-bottom h6 .join:hover {
+        background-position: 0 -27px;
+    }
+    .index-tourist .fl .fl-bottom h6 a {
+        color: #333;
+    }
+    .index-tourist .fl .fl-bottom h6 a:hover {
+        color: #ec6909;
+    }
+    .index-tourist .fl .fl-bottom ul {
+        margin-bottom: 30px;
+    }
+    .index-tourist .fl .fl-bottom ul li {
+        float: left;
+        width: 180px;
+        overflow: hidden;
+        height: 31px;
+        font: 14px/30px "微软雅黑";
+        color: #333;
+    }
+    .index-tourist .fl .fl-bottom ul li a {
+        font: 14px/30px "微软雅黑";
+        color: #333;
+    }
+    .index-tourist .fl .fl-bottom ul li a:hover {
+        color: #ec6909;
+    }
+    .index-tourist .fl .fl-bottom ul li.log-join a {
+        color: #ff9900;
+    }
+    .index-tourist .fl .fl-bottom ul li.log-join a:hover {
+        color: #ec6909;
+    }
+    .index-tourist .fl .fl-bottom ul li.log-join a span {
+        color: #999;
+        margin: 0 3px;
+    }
+    .index-tourist .fl .fl-bottom .button {
+        display: none;
+    }
+    .index-tourist .fl .fl-top {
+        margin-bottom: 20px;
+    }
+    .index-tourist .fl .fl-top h6 {
+        font: 22px/30px "微软雅黑";
+        color: #333;
+        margin-bottom: 30px;
+    }
+    .index-tourist .fl .fl-top h6 .join {
+        display: inline-block;
+        width: 77px;
+        height: 14px;
+        margin: 20px 0 0 15px;
+        /*background: url(http://img1.lotour.com/index/join.png) no-repeat 0 0;*/
+    }
+    .index-tourist .fl .fl-top h6 .join:hover {
+        background-position: 0 -27px;
+    }
+    .index-tourist .fl .fl-top h6 a {
+        color: #333;
+    }
+    .index-tourist .fl .fl-top h6 a:hover {
+        color: #ec6909;
+    }
+    .index-tourist .fl .fl-top ul li {
+        float: left;
+        width: 340px;
+        display: inline;
+        margin-bottom: 30px;
+    }
+
+    /*.index-tourist .fl .fl-top ul li{*/
+        /*list-style-type: none;*/
+        /*margin-top: 10px;*/
+        /*-webkit-transition: padding 1s;*/
+        /*-ms-transition: padding time;*/
+        /*-o-transition: padding 1s;*/
+        /*transition: padding 1s;*/
+    /*}*/
+    /*.index-tourist .fl .fl-top ul li:hover{*/
+        /*border: 1px solid #fff;*/
+        /*padding:  10px 0;*/
+    /*}*/
+    .index-tourist .fl .fl-top ul li img {
+        border-radius: 100%;
+        width: 60px;
+        height: 60px;
+        float: left;
+        margin-right: 15px;
+    }
+    .index-tourist .fl .fl-top ul li img:hover {
+        box-shadow: 0 0 10px #ec6909;
+    }
+    .index-tourist .fl .fl-top ul li h5 {
+        height: 34px;
+        overflow: hidden;
+    }
+    .index-tourist .fl .fl-top ul li h5 a {
+        font: 20px/34px 微软雅黑;
+        color: #333;
+    }
+    .index-tourist .fl .fl-top ul li p {
+        font: 12px/20px 微软雅黑;
+        color: #999;
+    }
+    .index-tourist .fl .fl-top ul li p span {
+        font: 12px/20px 微软雅黑;
+        color: #fe7930;
+    }
+    .index-tourist .fl .fl-top ul li.more {
+        width: 110px;
+        margin-right: 0px;
+        padding-top: 20px;
+    }
+    .index-tourist .fl .fl-top ul li.more a {
+        font: 14px/35px "微软雅黑";
+        color: #333;
+    }
+    .index-tourist .fl .fl-top ul li.more a:hover {
+        color: #ec6909;
+    }
+    .index-tourist .fl .fl-top .button {
+        width: 220px;
+        height: 50px;
+        font: 24px/50px "微软雅黑";
+        border: 2px solid #ff860d;
+        color: #ff860d;
+        margin: 0 auto;
+        display: none;
+        border-radius: 5px;
+        position: relative;
+        left: 25px;
+        cursor: pointer;
+        text-align: center;
+    }
+    .index-tourist .fl .fl-top .button:hover {
+        animation: color2 0.5s linear;
+        -webkit-animation: color2 0.5s linear;
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode:
+        forwards;
+    }
+
+
+    .index-tourist .fl .fl-cen {
+        margin-bottom: 30px;
+    }
+    .index-tourist .fl .fl-cen .left {
+        float: left;
+        margin-left: 100px;
+    }
+    .index-tourist .fl .fl-cen .left a {
+        width: 162px;
+        height: 35px;
+        display: block;
+        border: 1px solid #d3d3d3;
+        font: 16px/35px 微软雅黑;
+        color: #969696;
+        text-align: center;
+        background: #fff;
+        border-radius: 3px;
+    }
+    .index-tourist .fl .fl-cen .left a span {
+        color: #ff860d;
+    }
+    .index-tourist .fl .fl-cen .left a:hover {
+        background: #eeeeee;
+    }
+    .index-tourist .fl .fl-cen .left p {
+        font: 12px/30px 宋体;
+        color: #999;
+        text-align: center;
+    }
+    .index-tourist .fl .fl-cen .right {
+        float: left;
+        margin-left: 115px;
+    }
+    .index-tourist .fl .fl-cen .right a {
+        width: 162px;
+        height: 35px;
+        display: block;
+        border: 1px solid #d3d3d3;
+        font: 16px/35px 微软雅黑;
+        color: #969696;
+        text-align: center;
+        background: #fff;
+        border-radius: 3px;
+    }
+    .index-tourist .fl .fl-cen .right a:hover {
+        background: #eeeeee;
+    }
+    .index-tourist .fl .fl-cen .right a span {
+        color: #ff860d;
+    }
+    .index-tourist .fl .fl-cen .right p {
+        font: 12px/30px 宋体;
+        color: #999;
+        text-align: center;
+    }
+
+    /*文字右部分*/
+
+    .index-tourist .fr {
+        float: right;
+        width: 450px;
+    }
+    .index-tourist .fr h6 {
+        font: 22px/30px "微软雅黑";
+        color: #adadad;
+        margin-bottom: 0px;
+    }
+
+    .index-tourist .fr h6 a {
+        font: 22px/30px "微软雅黑";
+        color: #adadad;
+        display: inline-block;
+    }
+    .index-tourist .fr .l{
+        color: #000;
+    }
+    .index-tourist .fr h6 a:hover, .index-tourist .fr h6 a.read-num {
+        color: #333;
+    }
+    .index-tourist .fr h6 span {
+        font: 22px/30px "宋体";
+        margin: 0 10px;
+        display: inline-block;
+    }
+
+    .index-tourist .fr ul {
+        padding-bottom: 20px;
+        padding-top: 20px;
+        /*display: none;*/
+    }
+    .index-tourist .fr ul.read-num {
+        display: block;
+    }
+    .index-tourist .fr ul li {
+        overflow: hidden;
+    }
+    .index-tourist .fr ul li.bt {
+        margin-bottom: 150px;
+    }
+    .index-tourist .fr ul li .cont {
+        float: left;
+        max-width:
+        390px;
+        height:38px
+    }
+    .index-tourist .fr ul li .cont .a-per {
+        color: #333;
+        font: 16px/38px "微软雅黑";
+    }
+    .index-tourist .fr ul li .cont .a-per:hover {
+        color: #6e6e6e;
+    }
+    .index-tourist .fr ul li .cont .a-after {
+        color: #999;
+        font: 12px/38px"微软雅黑";
+        padding-left: 10px;
+    }
+    .index-tourist .fr ul li span.eye {
+        display: block;
+        height: 33px;
+        font: 12px/33px "微软雅黑";
+        float: right;
+        width: 45px;
+        margin-left: 10px;
+        background:url(../images/disbg.png) no-repeat 0 -150px;
+        padding-left: 20px;
+        margin-top: 5px;
+
+    }
+
+    .index-tourist .fr ul li :hover{
+        text-shadow: 1px 4px 5px #aaa;
+    }
+
+    .fr .cont .num {
+        font-family: "Arail";
+        font-size: 13px;
+        color: #fff;
+        background: #cacaca;
+        display: inline-block;
+        width: 13px;
+        height: 15px;
+        padding-right: 3px;
+        line-height: 15px;
+        text-align: center;
+        border-radius: 2px;
+        margin-right: 10px;
+        position: relative;
+        top: 12px;
+        float: left;
+        vertical-align: middle;
+    }
+
+    .fr .cont .num1 {
+        background: #ec6909;
+    }
+    .fr .cont .num2 {
+        background: #ff9900;
+    }
+    .fr .cont .num3 {
+        background: #9e9e9e;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

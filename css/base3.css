@@ -1,0 +1,303 @@
+﻿@charset "UTF-8";
+/*初始化  reset*/
+blockquote, body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr, input, legend, li, ol, p, pre, td, textarea, th, ul {
+    margin: 0;
+    padding: 0
+}
+
+body, button, input, select, textarea {
+    font: 12px/1.5 "Microsoft YaHei", "微软雅黑", SimSun, "宋体", sans-serif;
+    color: #666;
+}
+
+ol, ul {
+    list-style: none
+}
+
+a {
+    text-decoration: none
+}
+
+fieldset, img {
+    border: 0;
+    vertical-align: top;
+}
+
+a, input, button, select, textarea {
+    outline: none;
+}
+
+a, button {
+    cursor: pointer;
+}
+
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset, img, input, button {
+    /*fieldset组合表单中的相关元素*/
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul, ol {
+    list-style: none; /*清除列表风格*/
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "宋体";
+}
+
+select, input {
+    vertical-align: middle;
+}
+
+select, input, textarea {
+    font-size: 12px;
+    margin: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+/*防止多行文本框拖动*/
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+/*  去掉图片低测默认的3像素空白缝隙*/
+table {
+    border-collapse: collapse; /*合并外边线*/
+}
+
+body {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53"; /*宋体，Unicode，统一码*/
+    color: #666;
+    background: #fff
+}
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #C81623;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+
+.col-red {
+    color: #C81623 !important;
+}
+
+
+
+
+
+
+/*轮播图部分*/
+.wrap {
+    height: 670px;
+    width: 1200px;
+    margin: 10px auto;
+}
+
+.slide {
+    height: 500px;
+    position: relative;
+}
+
+.slide li {
+    position: absolute;
+    left: 200px;
+    top: 0;
+}
+
+.slide li img {
+    width: 100%;
+}
+
+.arrow {
+    opacity: 0;
+}
+
+.prev, .next {
+    width: 76px;
+    height: 112px;
+    position: absolute;
+    top: 60%;
+    margin-top: -56px;
+    background: url(images/prev_1.png) no-repeat;
+    z-index: 99;
+}
+
+.next {
+    right: 0;
+    background-image: url(images/next_1.png);
+}
+
+
+        /*闪动部分*/
+.main {
+    width: 1200px;
+    height: 620px;
+    margin: 0 auto;
+}
+
+.main-l li {
+    width: 390px;
+    height: 307px;
+    float: left;
+    margin: 5px 10px 5px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+li .zzhao {
+    position: absolute;
+    left: 0;
+    width: 390px;
+    height: 307px;
+    background: #000;
+    opacity: 0.4;
+    display: none;
+}
+
+.main-l {
+    margin: 0 auto;
+}
+
+.main-l .no {
+    margin-right: 0;
+}
+
+.main-l li .word {
+    width: 380px;
+    height: 120px;
+    position: absolute;
+    left: 0px;
+    bottom: -82px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+.main-l li a {
+    display: block;
+    height: 37px;
+    font: 400 16px/37px "microsoft yahei";
+    color: #f7f7f7;
+    padding-left: 20px;
+
+}
+
+.zz {
+    border-top: 1px solid #444;
+    width: 355px;
+    height: 80px;
+    padding-top: 15px;
+    margin: 0 auto;
+}
+
+.zz img {
+    float: left;
+    margin-right: 10px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #444444;
+}
+
+.word .cont {
+    float: left;
+    display: inline-block;
+    width: 230px;
+    font-size: 12px;
+    color: #999;
+}
+
+/*右下角二维码*/
+.ad {
+    position: relative;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 120px;
+    height: 120px;
+    display: none;
+}
+
+.ad span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 18px;
+    background-image: url(images/h.jpg);
+    cursor: pointer;
+}
+
+
+
+
+/*还没做好部分*/
+.box {
+    position: relative;
+    width: 1200px;
+    height: 307px;
+}
+.xuan1 {
+     position: absolute;
+     left: 20px;
+     top:10px;
+     /*width: 100px;*/
+     /*height: 100px;*/
+     /*background: pink;*/
+ }
+.xuan2 {
+    position: absolute;
+    left: 315px;
+    top:20px;
+    /*width: 100px;*/
+    /*height: 100px;*/
+    /*background: pink;*/
+}
+.xuan3 {
+    position: absolute;
+    right: 0px;
+    top:10px;
+    /*width: 100px;*/
+    /*height: 100px;*/
+    /*background: pink;*/
+}
